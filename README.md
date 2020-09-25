@@ -1,5 +1,5 @@
 # cropTriage
-Accompanying application for senior design team 29
+Accompanying application for senior design team 29 for Texas A&M ECEN 403, 404 Senior Design
 
 # Changelog
 > 9/25/2020
