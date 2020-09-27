@@ -1,5 +1,9 @@
 # cropTriage
-Accompanying application for senior design team 29 for Texas A&M ECEN 403, 404 Senior Design
+Accompanying application for senior design team 29 for Texas A&M ECEN 403, 404 Senior Design.
+
+# Branch organization
+Main branch means it works 
+😉 New Stuff branch means it's being worked on
 
 # Changelog
 > 9/25/2020
@@ -9,12 +13,12 @@ Accompanying application for senior design team 29 for Texas A&M ECEN 403, 404 S
 
 | Unit Test          | Description                                                                                   | Due Date | Completed |
 |--------------------|-----------------------------------------------------------------------------------------------|----------|-----------|
-| App navigation     | App can navigate between each page planned for the app (2 pages)                              | 9/20/20  |     ☑️     |
-| Map View           | App can view local area by pulling core location data                                         | 9/22/20  |           |
-| Map View Config    | User can place markers for drone scanning on map view                                         | 9/22/20  |           |
-| Drone path editing | User can edit drone path to ensure obstacle avoidance                                         | 9/29/20  |           |
+| App navigation     | App can navigate between each page planned for the app (2 pages)                              | 9/27/20  |           |
+| Map View           | App can view local area by pulling core location data                                         | 9/29/20  |           |
+| Map View Config    | User can place markers for drone scanning on map view                                         | 9/29/20  |           |
+| Drone path editing | User can edit drone path to ensure obstacle avoidance                                         | 10/6/20  |           |
 | Data Model         | Class for managing, saving, and reading data is done. Data is persistent between app restarts | 10/6/20  |           |
-| Debug              | App is logging relevant debugging information to console for above tests                      | 10/6/20  |           |
+| Debug              | App is logging relevant debugging information to console for above tests                      | 10/13/20 |           |
 | Send GPS Data      | App is able to send GPS data for scanning to other subsystem                                  | 10/13/20 |           |
 | Crop Data View     | Crop data view page is created and has a map and placeholders for statistical info            | 10/20/20 |           |
 | ML/Statistics      | Crop data can be processed by App by ML or statistics algorithm and can display that info     | 10/27/20 |           |
