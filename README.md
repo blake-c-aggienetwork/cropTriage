@@ -2,10 +2,11 @@
 Accompanying application for senior design team 29 for Texas A&M ECEN 403, 404 Senior Design.
 
 # Branch organization
-Main branch means it works 
-😉 New Stuff branch means it's being worked on
+I was going to use multiple branches but it seemed like too much work.
 
 # Changelog
+> 9/27/2020
+> - Added app navigation capabilities. App can swap between views for Home, Drone Config, Crop Data View, and Settings
 > 9/25/2020
 > - Made Xcode project files, and created readme
 
