@@ -13,7 +13,7 @@ Main branch means it works
 
 | Unit Test          | Description                                                                                   | Due Date | Completed |
 |--------------------|-----------------------------------------------------------------------------------------------|----------|-----------|
-| App navigation     | App can navigate between each page planned for the app (2 pages)                              | 9/27/20  |           |
+| App navigation     | App can navigate between each page planned for the app (2 pages)                              | 9/27/20  |    😄     |
 | Map View           | App can view local area by pulling core location data                                         | 9/29/20  |           |
 | Map View Config    | User can place markers for drone scanning on map view                                         | 9/29/20  |           |
 | Drone path editing | User can edit drone path to ensure obstacle avoidance                                         | 10/6/20  |           |
