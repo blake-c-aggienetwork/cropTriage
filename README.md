@@ -7,6 +7,7 @@ I was going to use multiple branches but it seemed like too much work.
 # Changelog
 > 9/27/2020
 > - Added app navigation capabilities. App can swap between views for Home, Drone Config, Crop Data View, and Settings
+
 > 9/25/2020
 > - Made Xcode project files, and created readme
 
