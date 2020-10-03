@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B81EC625252016BF003A602F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EC624252016BF003A602F /* MenuViewController.swift */; };
 		B81EC62925201D73003A602F /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EC62825201D73003A602F /* SlideInTransition.swift */; };
+		B873C7C525291A2D00F9F940 /* droneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B873C7C425291A2D00F9F940 /* droneView.xib */; };
+		B873C7C925291B3A00F9F940 /* droneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B873C7C825291B3A00F9F940 /* droneView.swift */; };
 		B8AB6B29251E4919005BF38F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB6B28251E4919005BF38F /* AppDelegate.swift */; };
 		B8AB6B2B251E4919005BF38F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB6B2A251E4919005BF38F /* SceneDelegate.swift */; };
 		B8AB6B2D251E4919005BF38F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB6B2C251E4919005BF38F /* HomeViewController.swift */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		B81EC624252016BF003A602F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B81EC62825201D73003A602F /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
+		B873C7C425291A2D00F9F940 /* droneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = droneView.xib; sourceTree = "<group>"; };
+		B873C7C825291B3A00F9F940 /* droneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = droneView.swift; sourceTree = "<group>"; };
 		B8AB6B25251E4919005BF38F /* cropTriage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cropTriage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8AB6B28251E4919005BF38F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8AB6B2A251E4919005BF38F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,12 +66,14 @@
 			children = (
 				B8AB6B36251E491A005BF38F /* Info.plist */,
 				B8AB6B28251E4919005BF38F /* AppDelegate.swift */,
-				B8AB6B2C251E4919005BF38F /* HomeViewController.swift */,
 				B81EC624252016BF003A602F /* MenuViewController.swift */,
 				B8AB6B2A251E4919005BF38F /* SceneDelegate.swift */,
 				B8AB6B31251E491A005BF38F /* Assets.xcassets */,
 				B8AB6B33251E491A005BF38F /* LaunchScreen.storyboard */,
 				B8AB6B2E251E4919005BF38F /* Main.storyboard */,
+				B8AB6B2C251E4919005BF38F /* HomeViewController.swift */,
+				B873C7C425291A2D00F9F940 /* droneView.xib */,
+				B873C7C825291B3A00F9F940 /* droneView.swift */,
 				B81EC62825201D73003A602F /* SlideInTransition.swift */,
 			);
 			path = cropTriage;
@@ -131,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8AB6B35251E491A005BF38F /* LaunchScreen.storyboard in Resources */,
+				B873C7C525291A2D00F9F940 /* droneView.xib in Resources */,
 				B8AB6B32251E491A005BF38F /* Assets.xcassets in Resources */,
 				B8AB6B30251E4919005BF38F /* Main.storyboard in Resources */,
 			);
@@ -148,6 +155,7 @@
 				B8AB6B2B251E4919005BF38F /* SceneDelegate.swift in Sources */,
 				B81EC625252016BF003A602F /* MenuViewController.swift in Sources */,
 				B81EC62925201D73003A602F /* SlideInTransition.swift in Sources */,
+				B873C7C925291B3A00F9F940 /* droneView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

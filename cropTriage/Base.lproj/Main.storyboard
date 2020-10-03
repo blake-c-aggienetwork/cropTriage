@@ -17,6 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="4Ni-g6-rHW" appends="YES" id="HsY-Wc-Ynp"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="jPe-8h-96a">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="xmf-zx-j9d">
@@ -27,6 +31,11 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="4Ni-g6-rHW">
+                    <connections>
+                        <action selector="swipeAction:" destination="BYZ-38-t0r" id="WOW-A1-nak"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="856.29496402877703" y="124.46043165467627"/>
         </scene>
@@ -38,6 +47,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <sections>
                             <tableViewSection id="cCw-yT-faK">
                                 <cells>

@@ -25,7 +25,6 @@ class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
         
         let finalWidth = toViewController.view.bounds.width * 0.3
         let finalHeight = toViewController.view.bounds.height
-//        Not Used
         
         if isPresenting{
             // add dimming view
@@ -33,6 +32,7 @@ class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
             dimmingView.frame = containerView.bounds
             dimmingView.backgroundColor = .black
             dimmingView.alpha = 0.0
+            
             // add menu view controller to container
             containerView.addSubview(toViewController.view)
             // Init frame off screen
@@ -57,6 +57,8 @@ class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
         UIView.animate(withDuration: duration, animations: {self.isPresenting ? transform() : identity() } ) {
             (_) in transitionContext.completeTransition(!isCancelled)
         }
+        
+       
     }
 
 }

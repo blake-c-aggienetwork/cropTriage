@@ -25,12 +25,13 @@ class MenuViewController: UITableViewController {
         // Do any additional setup after loading the view.
     }
     
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let menuType = MenuType(rawValue: indexPath.row) else { return }
-        dismiss(animated: true) {
+        self.dismiss(animated: true) {
             print("Changing to menu: \(menuType)")
             self.tappedMenu?(menuType)
         }
     }
-
+    
 }
