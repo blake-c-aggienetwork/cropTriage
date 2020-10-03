@@ -5,6 +5,9 @@ Accompanying application for senior design team 29 for Texas A&M ECEN 403, 404 S
 I was going to use multiple branches but it seemed like too much work.
 
 # Changelog
+> 10/3/2020
+> - Added a swipe gesture to open side menu. Added location perms and mapview to drone config view.
+
 > 9/27/2020
 > - Added app navigation capabilities. App can swap between views for Home, Drone Config, Crop Data View, and Settings
 
