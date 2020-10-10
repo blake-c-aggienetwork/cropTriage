@@ -23,10 +23,15 @@ class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
         
         let containerView = transitionContext.containerView
         
+//        let tapReg = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        
         let finalWidth = toViewController.view.bounds.width * 0.3
         let finalHeight = toViewController.view.bounds.height
         
         if isPresenting{
+            // add gesture to dimming view
+//            dimmingView.addGestureRecognizer(tapReg)
+            
             // add dimming view
             containerView.addSubview(dimmingView)
             dimmingView.frame = containerView.bounds
@@ -57,6 +62,7 @@ class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
         UIView.animate(withDuration: duration, animations: {self.isPresenting ? transform() : identity() } ) {
             (_) in transitionContext.completeTransition(!isCancelled)
         }
+        
         
        
     }

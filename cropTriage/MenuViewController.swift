@@ -25,7 +25,6 @@ class MenuViewController: UITableViewController {
         // Do any additional setup after loading the view.
     }
     
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let menuType = MenuType(rawValue: indexPath.row) else { return }
         self.dismiss(animated: true) {
