@@ -5,6 +5,11 @@ Accompanying application for senior design team 29 for Texas A&M ECEN 403, 404 S
 I was going to use multiple branches but it seemed like too much work.
 
 # Changelog
+> 10/10/2020
+> - Drone Config view has "Add Marker Button"
+> - Markers placed within drone config map contain a radius, displaying scan area
+> - Markers can be dragged around on map
+
 > 10/3/2020
 > - Added a swipe gesture to open side menu. Added location perms and mapview to drone config view.
 
@@ -20,8 +25,8 @@ I was going to use multiple branches but it seemed like too much work.
 |--------------------|-----------------------------------------------------------------------------------------------|----------|-----------|
 | App navigation     | App can navigate between each page planned for the app (2 pages)                              | 9/27/20  |    😄     |
 | Map View           | App can view local area by pulling core location data                                         | 9/29/20  |     😄    |
-| Map View Config    | User can place markers for drone scanning on map view                                         | 10/6/20  |           |
-| Drone path editing | User can edit drone path to ensure obstacle avoidance                                         | 10/13/20 |           |
+| Map View Config    | User can place markers for drone scanning on map view                                         | 10/6/20  |    😉      |
+| Drone path editing | User can edit drone path to ensure obstacle avoidance                                         | 10/13/20 |     🙂     |
 | Data Model         | Class for managing, saving, and reading data is done. Data is persistent between app restarts | 10/13/20 |           |
 | Debug              | App is logging relevant debugging information to console for above tests                      | 10/13/20 |           |
 | Send GPS Data      | App is able to send GPS data for scanning to other subsystem                                  | 10/13/20 |           |
