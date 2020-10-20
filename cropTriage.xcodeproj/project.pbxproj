@@ -17,6 +17,7 @@
 		B8AB6B30251E4919005BF38F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8AB6B2E251E4919005BF38F /* Main.storyboard */; };
 		B8AB6B32251E491A005BF38F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8AB6B31251E491A005BF38F /* Assets.xcassets */; };
 		B8AB6B35251E491A005BF38F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8AB6B33251E491A005BF38F /* LaunchScreen.storyboard */; };
+		B8B5B80C2532960300B59541 /* markerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B5B80B2532960300B59541 /* markerData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B8AB6B31251E491A005BF38F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8AB6B34251E491A005BF38F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8AB6B36251E491A005BF38F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8B5B80B2532960300B59541 /* markerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = markerData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				B8AB6B2E251E4919005BF38F /* Main.storyboard */,
 				B8AB6B2C251E4919005BF38F /* HomeViewController.swift */,
 				B873C7C425291A2D00F9F940 /* droneView.xib */,
+				B8B5B80B2532960300B59541 /* markerData.swift */,
 				B873C7C825291B3A00F9F940 /* droneView.swift */,
 				B81EC62825201D73003A602F /* SlideInTransition.swift */,
 			);
@@ -154,6 +157,7 @@
 				B8AB6B29251E4919005BF38F /* AppDelegate.swift in Sources */,
 				B8AB6B2B251E4919005BF38F /* SceneDelegate.swift in Sources */,
 				B81EC625252016BF003A602F /* MenuViewController.swift in Sources */,
+				B8B5B80C2532960300B59541 /* markerData.swift in Sources */,
 				B81EC62925201D73003A602F /* SlideInTransition.swift in Sources */,
 				B873C7C925291B3A00F9F940 /* droneView.swift in Sources */,
 			);
