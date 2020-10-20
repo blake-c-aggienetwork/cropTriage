@@ -5,8 +5,7 @@ Accompanying application for senior design team 29 for Texas A&M ECEN 403, 404 S
 I was going to use multiple branches but it seemed like too much work.
 
 # Image Preview as of 10/20/2020
-![previewImage]
-(https://i.imgur.com/UoSeei4.png)
+![previewImage](https://i.imgur.com/UoSeei4.png)
 
 
 # Changelog
