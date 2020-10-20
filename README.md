@@ -4,7 +4,19 @@ Accompanying application for senior design team 29 for Texas A&M ECEN 403, 404 S
 # Branch organization
 I was going to use multiple branches but it seemed like too much work.
 
+# Image Preview as of 10/20/2020
+![previewImage]
+(https://i.imgur.com/UoSeei4.png)
+
+
 # Changelog
+> 10/20/2020
+> - Added map view selector and is persistant
+> - Markers now have data management, they are persistent
+> - Added drone path lines
+> - Added remove all markers button
+> - Added placeholder labels for drone flight time estimate
+
 > 10/10/2020
 > - Drone Config view has "Add Marker Button"
 > - Markers placed within drone config map contain a radius, displaying scan area
@@ -27,9 +39,9 @@ I was going to use multiple branches but it seemed like too much work.
 | Map View           | App can view local area by pulling core location data                                         | 9/29/20  |     😄    |
 | Map View Config    | User can place markers for drone scanning on map view                                         | 10/6/20  |    😉      |
 | Drone path editing | User can edit drone path to ensure obstacle avoidance                                         | 10/13/20 |     🙂     |
-| Data Model         | Class for managing, saving, and reading data is done. Data is persistent between app restarts | 10/13/20 |           |
-| Debug              | App is logging relevant debugging information to console for above tests                      | 10/13/20 |           |
-| Send GPS Data      | App is able to send GPS data for scanning to other subsystem                                  | 10/13/20 |           |
+| Data Model         | Class for managing, saving, and reading data is done. Data is persistent between app restarts | 10/13/20 |    😀     |
+| Debug              | App is logging relevant debugging information to console for above tests                      | 10/13/20 |    😀     |
+| Send GPS Data      | App is able to send GPS data for scanning to other subsystem                                  | 10/13/20 |          |
 | Crop Data View     | Crop data view page is created and has a map and placeholders for statistical info            | 10/20/20 |           |
 | ML/Statistics      | Crop data can be processed by App by ML or statistics algorithm and can display that info     | 10/27/20 |           |
 | Receive Crop Data  | App can receive crop data from other subsystem                                                | 11/3/20  |           |
