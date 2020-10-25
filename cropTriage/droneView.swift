@@ -15,6 +15,7 @@ class droneView: UIView{
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapTypeSelector: UISegmentedControl!
+    @IBOutlet weak var timeLabel: UILabel!
     
     // MARK: DATA management
     let defaults = UserDefaults.standard
@@ -78,7 +79,33 @@ class droneView: UIView{
             }
             line = MKPolyline(coordinates: coordArr, count: coordArr.count)
             mapView.addOverlay(line)
+            updateTime(coordArr: coordArr)
         }
+    }
+    
+    func updateTime(coordArr: Array<CLLocationCoordinate2D>){
+        print("Updating Time")
+        var pathDistance: CLLocationDistance = 0.0
+        for i in 0...coordArr.endIndex-2{
+            let coord1 = CLLocation(latitude: coordArr[i].latitude, longitude: coordArr[i].longitude)
+            let coord2 = CLLocation(latitude: coordArr[i+1].latitude, longitude: coordArr[i+1].longitude)
+            
+            pathDistance = pathDistance + coord1.distance(from: coord2)
+        }
+//        print("Total Drone Path Distance: " + String(pathDistance))
+        let droneSpeedInMetersPerSecond = 25.0
+        let timeInSeconds: Double = pathDistance/droneSpeedInMetersPerSecond + 360.0*Double(coordArr.count)
+//        print("Estimated Time in Seconds: " + String(timeInSeconds))
+        let hoursCnt = Int(floor(timeInSeconds/3600))
+//        print(hoursCnt)
+        let minutesCnt = Int((timeInSeconds/3600.0 - Double(hoursCnt))*60.0)
+//        print(minutesCnt)
+        
+        let updatedString = String(format: "%02d:", hoursCnt) + String(format: "%02d", minutesCnt)
+        
+        print("updateting time to: " + updatedString)
+        timeLabel.text = updatedString
+        
     }
     
     func refreshCircles(){
@@ -160,16 +187,28 @@ class droneView: UIView{
         locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.startUpdatingLocation()
         
-        // Zoom to user location
-        if let userLocation = locationManager.location?.coordinate {
-            let viewRegion = MKCoordinateRegion(center: userLocation, latitudinalMeters: 500, longitudinalMeters: 500)
-            mapView.setRegion(viewRegion, animated: true)
-        }
-        mapView.showsUserLocation = true
-        
         // Add saved pins
         self.loadSavedPins()
         self.renderLines()
+        
+        // zoom to last marker if one exists
+        if markerManager.getPinCnt() > 0{
+            let lastPin = markerManager.getLastPin()
+            let viewRegion = MKCoordinateRegion(center: lastPin.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
+            mapView.setRegion(viewRegion, animated: true)
+        }
+        else{
+            // Zoom to user location
+            if let userLocation = locationManager.location?.coordinate {
+                let viewRegion = MKCoordinateRegion(center: userLocation, latitudinalMeters: 500, longitudinalMeters: 500)
+                mapView.setRegion(viewRegion, animated: true)
+            }
+        }
+        
+        
+        mapView.showsUserLocation = true
+        
+        
 
     }
     

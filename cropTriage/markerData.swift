@@ -8,34 +8,6 @@
 import Foundation
 import MapKit
 
-// MARK: marker struct
-class Marker: Codable {
-    // type of marker, can be a point that will be scanned or a waypoint
-    
-    var lat: Double
-    var long: Double
-    var isWayPoint: Bool
-    
-    init(lat: Double, long: Double, isWayPoint: Bool) {
-        self.lat = lat
-        self.long = long
-        self.isWayPoint = isWayPoint
-    }
-    
-    func getCoordinateObj() -> CLLocationCoordinate2D{
-        return CLLocationCoordinate2D(latitude: lat, longitude: long)
-    }
-    
-    func getIsWayPoint() -> Bool{
-        return isWayPoint
-    }
-    
-    func updateCoord(lat: Double, long: Double){
-        self.lat = lat
-        self.long = long
-    }
-}
-
 // MARK: marker data manager
 class MarkerDataManger {
     
@@ -56,7 +28,7 @@ class MarkerDataManger {
         isWayPointArr = defaults.array(forKey: "isWayPoint") as? Array<Bool> ?? Array<Bool>()
         
         // transfer array data into usable MK objects
-        if latArr.endIndex-1 > 0{
+        if latArr.endIndex-1 >= 0{
             for i in 0...latArr.endIndex-1{
                 let coord = CLLocationCoordinate2D(latitude: latArr[i], longitude: longArr[i])
                 
