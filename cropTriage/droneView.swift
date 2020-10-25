@@ -44,6 +44,7 @@ class droneView: UIView{
         }
         markerManager.deleteAllPins()
         self.renderLines()
+        self.updateTime()
     }
     
     
@@ -83,6 +84,11 @@ class droneView: UIView{
         }
     }
     
+    func updateTime(){
+        print("updating time to: 00:00")
+        timeLabel.text = "00:00"
+    }
+    
     func updateTime(coordArr: Array<CLLocationCoordinate2D>){
         print("Updating Time")
         var pathDistance: CLLocationDistance = 0.0
@@ -93,12 +99,12 @@ class droneView: UIView{
             pathDistance = pathDistance + coord1.distance(from: coord2)
         }
 //        print("Total Drone Path Distance: " + String(pathDistance))
-        let droneSpeedInMetersPerSecond = 25.0
+        let droneSpeedInMetersPerSecond = 25.0/2
         let timeInSeconds: Double = pathDistance/droneSpeedInMetersPerSecond + 360.0*Double(coordArr.count)
 //        print("Estimated Time in Seconds: " + String(timeInSeconds))
         let hoursCnt = Int(floor(timeInSeconds/3600))
 //        print(hoursCnt)
-        let minutesCnt = Int((timeInSeconds/3600.0 - Double(hoursCnt))*60.0)
+        let minutesCnt = Int(ceil((timeInSeconds/3600.0 - Double(hoursCnt))*60.0))
 //        print(minutesCnt)
         
         let updatedString = String(format: "%02d:", hoursCnt) + String(format: "%02d", minutesCnt)
@@ -211,61 +217,5 @@ class droneView: UIView{
         
 
     }
-    
-}
-
-// MARK: MKMAPVIEW DELEGATE
-extension droneView: MKMapViewDelegate{
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let _identifier = "marker"
-        var view: MKAnnotationView
-        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: _identifier) as? MKMarkerAnnotationView{
-            dequeuedView.annotation = annotation
-            view = dequeuedView
-        }
-        else{
-            print("Adding MK MarkerAnnotationView")
-            view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: _identifier)
-            view.canShowCallout = true
-            view.isDraggable = true
-        }
-        return view
-    }
-    
-    internal func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, didChange newState: MKAnnotationView.DragState, fromOldState oldState: MKAnnotationView.DragState) {
-        switch newState {
-        case .starting:
-            view.dragState = .dragging
-        case .dragging:
-            self.refreshCircles()
-        case .ending, .canceling:
-            view.dragState = .none
-            markerManager.pinMoved()
-            self.refreshCircles()
-            self.renderLines()
-        default: break
-        }
-    }
-    
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-            if overlay is MKCircle {
-                let circle = MKCircleRenderer(overlay: overlay)
-                circle.strokeColor = UIColor.red
-                circle.fillColor = UIColor(red: 240, green: 100, blue: 100, alpha: 0.2)
-                circle.lineWidth = 1
-                return circle
-            }
-            else if overlay is MKPolyline{
-                let line = MKPolylineRenderer(overlay: overlay)
-                line.strokeColor = UIColor.blue
-                line.lineWidth = CGFloat(5.0)
-                return line
-            }
-            else {
-                let circle = MKCircleRenderer(overlay: overlay)
-//                circle.fillColor = UIColor(red: 255, green: 1, blue: 1, alpha: 0.2)
-                return circle
-            }
-        }
     
 }

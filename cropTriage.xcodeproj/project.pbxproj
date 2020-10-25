@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B81A4BA02546002A0087C4F9 /* droneViewMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A4B9F2546002A0087C4F9 /* droneViewMapDelegate.swift */; };
 		B81EC625252016BF003A602F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EC624252016BF003A602F /* MenuViewController.swift */; };
 		B81EC62925201D73003A602F /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EC62825201D73003A602F /* SlideInTransition.swift */; };
 		B873C7C525291A2D00F9F940 /* droneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B873C7C425291A2D00F9F940 /* droneView.xib */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B81A4B9F2546002A0087C4F9 /* droneViewMapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = droneViewMapDelegate.swift; sourceTree = "<group>"; };
 		B81EC624252016BF003A602F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B81EC62825201D73003A602F /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
 		B873C7C425291A2D00F9F940 /* droneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = droneView.xib; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				B873C7C425291A2D00F9F940 /* droneView.xib */,
 				B8B5B80B2532960300B59541 /* markerData.swift */,
 				B873C7C825291B3A00F9F940 /* droneView.swift */,
+				B81A4B9F2546002A0087C4F9 /* droneViewMapDelegate.swift */,
 				B81EC62825201D73003A602F /* SlideInTransition.swift */,
 			);
 			path = cropTriage;
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8AB6B2D251E4919005BF38F /* HomeViewController.swift in Sources */,
+				B81A4BA02546002A0087C4F9 /* droneViewMapDelegate.swift in Sources */,
 				B8AB6B29251E4919005BF38F /* AppDelegate.swift in Sources */,
 				B8AB6B2B251E4919005BF38F /* SceneDelegate.swift in Sources */,
 				B81EC625252016BF003A602F /* MenuViewController.swift in Sources */,
