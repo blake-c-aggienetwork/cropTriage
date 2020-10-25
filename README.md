@@ -5,10 +5,15 @@ Accompanying application for senior design team 29 for Texas A&M ECEN 403, 404 S
 I was going to use multiple branches but it seemed like too much work.
 
 # Image Preview as of 10/20/2020
-![previewImage](https://i.imgur.com/UoSeei4.png)
+![previewImage]()
 
 
 # Changelog
+>10/25/2020
+> - Fixed bug where markers would not be saved if only 1 was present
+> - Map now zooms to last marker upon load of drone view insted of user location
+> - Estimated flight time label now updates based off a drone moving 25 meters/sec with 6 minutes at each stop
+
 > 10/20/2020
 > - Added map view selector and is persistant
 > - Markers now have data management, they are persistent
