@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class droneView: UIView{
+class droneView: UIView, UIGestureRecognizerDelegate{
     
     // MARK: IBOUTLETS
     @IBOutlet var contentView: UIView!
@@ -64,6 +64,9 @@ class droneView: UIView{
         }
     }
     
+    // gesture for placing pins
+
+    
     func renderLines(){
         for overlay in mapView.overlays {
             if overlay is MKPolyline{
@@ -83,6 +86,29 @@ class droneView: UIView{
             updateTime(coordArr: coordArr)
         }
     }
+    
+    @IBAction func handleTap(_ sender: UITapGestureRecognizer) {
+        
+        print("double tapped")
+        mapView.isZoomEnabled = false
+        print("temp disabled zoom")
+        
+        let location = sender.location(in: mapView)
+        let coord = mapView.convert(location, toCoordinateFrom: mapView)
+        
+        print("Attemping to create marker from double tap at")
+        
+        print(coord)
+        markerManager.addPoint(lat: coord.latitude, long: coord.longitude, isWayPoint: false)
+        mapView.addAnnotation(markerManager.getLastPin())
+        mapView.addOverlay(markerManager.getLastCircle())
+        
+        self.renderLines()
+        
+        mapView.isZoomEnabled = true
+        
+    }
+    
     
     func updateTime(){
         print("updating time to: 00:00")
@@ -213,7 +239,6 @@ class droneView: UIView{
         
         
         mapView.showsUserLocation = true
-        
         
 
     }

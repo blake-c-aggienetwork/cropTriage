@@ -7,13 +7,16 @@
 
 import UIKit
 
+// MARK: homeview controller
 class HomeViewController: UIViewController {
     
     let transition = SlideInTransition()
+    let defaults = UserDefaults()
     var topView: UIView?
     var menuRef: MenuViewController?
     
     var isMenuOut: Bool?
+    var menuIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +26,13 @@ class HomeViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.black,
          NSAttributedString.Key.font: UIFont(name: "Helvetica Neue", size: 21)!]
+        
+        // Load last loaded menu
+        menuIndex = defaults.integer(forKey: "menuIndex")
+        
+        self.transitionToNew(MenuType(rawValue: menuIndex) ?? .Home)
+        
+        
         
     }
     
@@ -77,6 +87,7 @@ class HomeViewController: UIViewController {
             self.topView = view
         }
         isMenuOut = false
+        defaults.setValue(menuType.rawValue, forKey: "menuIndex")
 //        self.title = title
         
     }
