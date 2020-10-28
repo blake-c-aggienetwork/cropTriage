@@ -9,6 +9,12 @@ I was going to use multiple branches but it seemed like too much work.
 
 
 # Changelog
+> 10/27/2020
+> - App launches to last page when closed
+> - Drone config now has tap to place marker for faster marker placement
+> - Fixed issue where flight time would not update if all markers were removed
+> - fixed issue with unnessary console system output
+
 >10/25/2020
 > - Fixed bug where markers would not be saved if only 1 was present
 > - Map now zooms to last marker upon load of drone view insted of user location
