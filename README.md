@@ -9,6 +9,11 @@ I was going to use multiple branches but it seemed like too much work.
 
 
 # Changelog
+> 11/2/2020
+> - Changed color scheme of app a bit
+> - Added libraries: Charts, CSV.swift, DTMHeatmap
+> - Started work on CropView
+
 > 10/27/2020
 > - App launches to last page when closed
 > - Drone config now has tap to place marker for faster marker placement
