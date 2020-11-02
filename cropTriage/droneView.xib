@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="droneView" customModule="cropTriage" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="PAY-dY-KGM"/>
+                <outlet property="controlView" destination="q1x-Jn-sjl" id="Hgq-Nm-MoZ"/>
                 <outlet property="mapTypeSelector" destination="QOu-sb-Shc" id="Ejy-e7-G2d"/>
                 <outlet property="mapView" destination="Yr1-ur-AW6" id="y5g-sF-60z"/>
                 <outlet property="timeLabel" destination="ii2-gm-pNS" id="qAl-GM-LGN"/>
@@ -31,57 +32,74 @@
                         <outletCollection property="gestureRecognizers" destination="ooJ-hd-3z5" appends="YES" id="YIC-mZ-fMG"/>
                     </connections>
                 </mapView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7s0-49-2fG">
-                    <rect key="frame" x="88" y="397" width="115" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                    <state key="normal" title="Add Marker"/>
-                    <connections>
-                        <action selector="addMarker:" destination="-1" eventType="touchUpInside" id="Hei-L8-3En"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TG1-Ub-jNb">
-                    <rect key="frame" x="51" y="445" width="188" height="39"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                    <state key="normal" title="Remove All Markers"/>
-                    <connections>
-                        <action selector="removeAllMarkers:" destination="-1" eventType="touchUpInside" id="Fko-y8-7so"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Estimated Flight Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcG-NQ-l29">
-                    <rect key="frame" x="63" y="237" width="165" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" systemColor="placeholderTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="ii2-gm-pNS">
-                    <rect key="frame" x="65" y="251" width="160" height="72"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QOu-sb-Shc">
-                    <rect key="frame" x="40" y="168" width="210" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <segments>
-                        <segment title="Standard"/>
-                        <segment title="Hybrid"/>
-                        <segment title="Satellite"/>
-                    </segments>
-                    <connections>
-                        <action selector="selectedNewMapType:" destination="-1" eventType="valueChanged" id="vfH-LM-lA5"/>
-                    </connections>
-                </segmentedControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1x-Jn-sjl" userLabel="controlView">
+                    <rect key="frame" x="20" y="20" width="264" height="794"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7s0-49-2fG">
+                            <rect key="frame" x="74.5" y="193" width="115" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                            <state key="normal" title="Add Marker"/>
+                            <connections>
+                                <action selector="addMarker:" destination="-1" eventType="touchUpInside" id="Hei-L8-3En"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estimated Flight Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcG-NQ-l29">
+                            <rect key="frame" x="49.5" y="153" width="165" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" systemColor="placeholderTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="ii2-gm-pNS">
+                            <rect key="frame" x="52" y="91" width="160" height="72"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QOu-sb-Shc">
+                            <rect key="frame" x="18.5" y="30" width="227" height="32"/>
+                            <segments>
+                                <segment title="Standard"/>
+                                <segment title="Hybrid"/>
+                                <segment title="Satellite"/>
+                            </segments>
+                            <connections>
+                                <action selector="selectedNewMapType:" destination="-1" eventType="valueChanged" id="vfH-LM-lA5"/>
+                            </connections>
+                        </segmentedControl>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TG1-Ub-jNb">
+                            <rect key="frame" x="38" y="725" width="188" height="39"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <state key="normal" title="Remove All Markers"/>
+                            <connections>
+                                <action selector="removeAllMarkers:" destination="-1" eventType="touchUpInside" id="Fko-y8-7so"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="kcG-NQ-l29" firstAttribute="centerX" secondItem="q1x-Jn-sjl" secondAttribute="centerX" id="HXD-qh-Usb"/>
+                        <constraint firstItem="QOu-sb-Shc" firstAttribute="centerX" secondItem="q1x-Jn-sjl" secondAttribute="centerX" id="OFD-aW-FG5"/>
+                        <constraint firstItem="QOu-sb-Shc" firstAttribute="top" secondItem="q1x-Jn-sjl" secondAttribute="top" constant="30" id="SJI-HH-WXb"/>
+                        <constraint firstItem="ii2-gm-pNS" firstAttribute="centerX" secondItem="q1x-Jn-sjl" secondAttribute="centerX" id="WGr-3v-x9h"/>
+                        <constraint firstItem="TG1-Ub-jNb" firstAttribute="centerX" secondItem="q1x-Jn-sjl" secondAttribute="centerX" id="ZAk-LZ-v6T"/>
+                        <constraint firstItem="kcG-NQ-l29" firstAttribute="top" secondItem="ii2-gm-pNS" secondAttribute="bottom" constant="-10" id="fKL-K2-345"/>
+                        <constraint firstAttribute="bottom" secondItem="TG1-Ub-jNb" secondAttribute="bottom" constant="30" id="i26-Yi-M86"/>
+                        <constraint firstItem="7s0-49-2fG" firstAttribute="top" secondItem="ii2-gm-pNS" secondAttribute="bottom" constant="30" id="k3H-Jx-QxM"/>
+                        <constraint firstItem="ii2-gm-pNS" firstAttribute="top" secondItem="QOu-sb-Shc" secondAttribute="bottom" constant="30" id="r1F-at-sv2"/>
+                        <constraint firstItem="7s0-49-2fG" firstAttribute="centerX" secondItem="q1x-Jn-sjl" secondAttribute="centerX" id="xKb-BZ-7fb"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Yr1-ur-AW6" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-20" id="5QI-Po-9Mm"/>
+                <constraint firstItem="Yr1-ur-AW6" firstAttribute="leading" secondItem="q1x-Jn-sjl" secondAttribute="trailing" constant="20" id="Oup-aZ-UT5"/>
                 <constraint firstItem="Yr1-ur-AW6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="eCo-7d-eaT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="q1x-Jn-sjl" secondAttribute="bottom" constant="20" id="hqd-41-df2"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Yr1-ur-AW6" secondAttribute="trailing" constant="20" id="nom-Gy-mQ2"/>
+                <constraint firstItem="q1x-Jn-sjl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="pKT-JL-z2H"/>
+                <constraint firstItem="q1x-Jn-sjl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="wTa-YD-TTn"/>
             </constraints>
             <point key="canvasLocation" x="140.82733812949641" y="120.86330935251799"/>
         </view>
@@ -94,6 +112,9 @@
     <resources>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

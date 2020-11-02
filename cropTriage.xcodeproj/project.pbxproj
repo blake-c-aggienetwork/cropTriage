@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		453600902E43EE161C17E44A /* Pods_cropTriage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0EBEA5320D00EF79A5EE13 /* Pods_cropTriage.framework */; };
 		B81A4BA02546002A0087C4F9 /* droneViewMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A4B9F2546002A0087C4F9 /* droneViewMapDelegate.swift */; };
 		B81EC625252016BF003A602F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EC624252016BF003A602F /* MenuViewController.swift */; };
 		B81EC62925201D73003A602F /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EC62825201D73003A602F /* SlideInTransition.swift */; };
@@ -19,9 +20,13 @@
 		B8AB6B32251E491A005BF38F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8AB6B31251E491A005BF38F /* Assets.xcassets */; };
 		B8AB6B35251E491A005BF38F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8AB6B33251E491A005BF38F /* LaunchScreen.storyboard */; };
 		B8B5B80C2532960300B59541 /* markerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B5B80B2532960300B59541 /* markerData.swift */; };
+		B8F3D9182550A23B005F67A0 /* cropView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8F3D9172550A23B005F67A0 /* cropView.xib */; };
+		B8F3D91B2550A25D005F67A0 /* cropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F3D91A2550A25D005F67A0 /* cropView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14A6B1E7C650F8B9155390DE /* Pods-cropTriage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cropTriage.debug.xcconfig"; path = "Target Support Files/Pods-cropTriage/Pods-cropTriage.debug.xcconfig"; sourceTree = "<group>"; };
+		765D2F90DB00C47CBC81050E /* Pods-cropTriage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cropTriage.release.xcconfig"; path = "Target Support Files/Pods-cropTriage/Pods-cropTriage.release.xcconfig"; sourceTree = "<group>"; };
 		B81A4B9F2546002A0087C4F9 /* droneViewMapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = droneViewMapDelegate.swift; sourceTree = "<group>"; };
 		B81EC624252016BF003A602F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B81EC62825201D73003A602F /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
@@ -36,6 +41,9 @@
 		B8AB6B34251E491A005BF38F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8AB6B36251E491A005BF38F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8B5B80B2532960300B59541 /* markerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = markerData.swift; sourceTree = "<group>"; };
+		B8F3D9172550A23B005F67A0 /* cropView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cropView.xib; sourceTree = "<group>"; };
+		B8F3D91A2550A25D005F67A0 /* cropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cropView.swift; sourceTree = "<group>"; };
+		EF0EBEA5320D00EF79A5EE13 /* Pods_cropTriage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cropTriage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				453600902E43EE161C17E44A /* Pods_cropTriage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36333BDCAC1459F75F430FD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF0EBEA5320D00EF79A5EE13 /* Pods_cropTriage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C5A791A1BEFCAB6254B26E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14A6B1E7C650F8B9155390DE /* Pods-cropTriage.debug.xcconfig */,
+				765D2F90DB00C47CBC81050E /* Pods-cropTriage.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B8AB6B1C251E4919005BF38F = {
 			isa = PBXGroup;
 			children = (
 				B8AB6B27251E4919005BF38F /* cropTriage */,
 				B8AB6B26251E4919005BF38F /* Products */,
+				9C5A791A1BEFCAB6254B26E3 /* Pods */,
+				36333BDCAC1459F75F430FD3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +109,8 @@
 				B873C7C825291B3A00F9F940 /* droneView.swift */,
 				B81A4B9F2546002A0087C4F9 /* droneViewMapDelegate.swift */,
 				B81EC62825201D73003A602F /* SlideInTransition.swift */,
+				B8F3D9172550A23B005F67A0 /* cropView.xib */,
+				B8F3D91A2550A25D005F67A0 /* cropView.swift */,
 			);
 			path = cropTriage;
 			sourceTree = "<group>";
@@ -92,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8AB6B39251E491A005BF38F /* Build configuration list for PBXNativeTarget "cropTriage" */;
 			buildPhases = (
+				B0D586972FAEBDD7E9179B89 /* [CP] Check Pods Manifest.lock */,
 				B8AB6B21251E4919005BF38F /* Sources */,
 				B8AB6B22251E4919005BF38F /* Frameworks */,
 				B8AB6B23251E4919005BF38F /* Resources */,
+				FDEB4B66F8B1F4E3CF6F6228 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,10 +178,53 @@
 				B873C7C525291A2D00F9F940 /* droneView.xib in Resources */,
 				B8AB6B32251E491A005BF38F /* Assets.xcassets in Resources */,
 				B8AB6B30251E4919005BF38F /* Main.storyboard in Resources */,
+				B8F3D9182550A23B005F67A0 /* cropView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B0D586972FAEBDD7E9179B89 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cropTriage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDEB4B66F8B1F4E3CF6F6228 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cropTriage/Pods-cropTriage-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cropTriage/Pods-cropTriage-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cropTriage/Pods-cropTriage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B8AB6B21251E4919005BF38F /* Sources */ = {
@@ -160,6 +235,7 @@
 				B81A4BA02546002A0087C4F9 /* droneViewMapDelegate.swift in Sources */,
 				B8AB6B29251E4919005BF38F /* AppDelegate.swift in Sources */,
 				B8AB6B2B251E4919005BF38F /* SceneDelegate.swift in Sources */,
+				B8F3D91B2550A25D005F67A0 /* cropView.swift in Sources */,
 				B81EC625252016BF003A602F /* MenuViewController.swift in Sources */,
 				B8B5B80C2532960300B59541 /* markerData.swift in Sources */,
 				B81EC62925201D73003A602F /* SlideInTransition.swift in Sources */,
@@ -226,6 +302,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$HOME/swift/cropTriage/Pods/Charts/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -287,6 +364,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -307,6 +385,7 @@
 		};
 		B8AB6B3A251E491A005BF38F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14A6B1E7C650F8B9155390DE /* Pods-cropTriage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -326,6 +405,7 @@
 		};
 		B8AB6B3B251E491A005BF38F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 765D2F90DB00C47CBC81050E /* Pods-cropTriage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

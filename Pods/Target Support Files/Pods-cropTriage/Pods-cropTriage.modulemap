@@ -1,0 +1,6 @@
+framework module Pods_cropTriage {
+  umbrella header "Pods-cropTriage-umbrella.h"
+
+  export *
+  module * { export * }
+}

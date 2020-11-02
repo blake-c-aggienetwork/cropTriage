@@ -1,0 +1,26 @@
+PODS:
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - CSV.swift (2.4.3)
+  - DTMHeatmap (1.0)
+
+DEPENDENCIES:
+  - Charts
+  - CSV.swift
+  - DTMHeatmap
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - CSV.swift
+    - DTMHeatmap
+
+SPEC CHECKSUMS:
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  CSV.swift: d38741b349c067b4a6db42237cb0e2974d21ccac
+  DTMHeatmap: f5588af0730fbfe78c75d6d013f1932d7d327ab2
+
+PODFILE CHECKSUM: 305b3cca802492136ad3a30f9ceb0bd11de26d1f
+
+COCOAPODS: 1.10.0

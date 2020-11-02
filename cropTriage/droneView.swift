@@ -16,6 +16,7 @@ class droneView: UIView, UIGestureRecognizerDelegate{
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapTypeSelector: UISegmentedControl!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var controlView: UIView!
     
     // MARK: DATA management
     let defaults = UserDefaults.standard
@@ -223,6 +224,10 @@ class droneView: UIView, UIGestureRecognizerDelegate{
         self.loadSavedPins()
         self.renderLines()
         
+        // Edit control view properties
+        controlView.layer.cornerRadius = 10
+        
+        
         // zoom to last marker if one exists
         if markerManager.getPinCnt() > 0{
             let lastPin = markerManager.getLastPin()
@@ -235,6 +240,7 @@ class droneView: UIView, UIGestureRecognizerDelegate{
                 let viewRegion = MKCoordinateRegion(center: userLocation, latitudinalMeters: 500, longitudinalMeters: 500)
                 mapView.setRegion(viewRegion, animated: true)
             }
+            
         }
         
         

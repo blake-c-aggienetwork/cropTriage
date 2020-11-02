@@ -72,8 +72,8 @@ class HomeViewController: UIViewController {
         case .Crop:
             title = "Crop Data"
             self.title = title
-            let view = UIView()
-            view.backgroundColor = .blue
+            let view = cropView()
+//            view.backgroundColor = .blue
             view.frame = self.view.bounds
             self.view.addSubview(view)
             self.topView = view
