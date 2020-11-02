@@ -10,8 +10,9 @@ I was going to use multiple branches but it seemed like too much work.
 
 # Changelog
 > 11/2/2020
+> - Added icons for app UI
 > - Changed color scheme of app a bit
-> - Added libraries: Charts, CSV.swift, DTMHeatmap
+> - Added libraries: Charts, CSV.swift, DTMHeatmap, fontawesome
 > - Started work on CropView
 
 > 10/27/2020
