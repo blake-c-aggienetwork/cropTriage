@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FontAwesome_swift
 
 // MARK: homeview controller
 class HomeViewController: UIViewController {
@@ -17,6 +18,7 @@ class HomeViewController: UIViewController {
     
     var isMenuOut: Bool?
     var menuIndex = 0
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,11 @@ class HomeViewController: UIViewController {
         
         self.transitionToNew(MenuType(rawValue: menuIndex) ?? .Home)
         
+        // Change menu button icon
+        let attributes = [
+            NSAttributedString.Key.font: UIFont.fontAwesome(ofSize: 30, style: .solid)]
+        menuButton.setTitleTextAttributes(attributes, for: .normal)
+        menuButton.title = String.fontAwesomeIcon(name: .bars)
         
         
     }

@@ -67,6 +67,7 @@ class cropView: UIView {
         controlView.layer.cornerRadius = 10 // edit control view properties
     }
     
+    // MARK: map config
     private func initMap(){
         // configure map properties
         

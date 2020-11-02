@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SAe-7f-5b1">
     <device id="ipad10_5" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,19 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="4Ni-g6-rHW" appends="YES" id="HsY-Wc-Ynp"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="jPe-8h-96a">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="xmf-zx-j9d">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" width="1" id="xmf-zx-j9d">
                             <connections>
                                 <action selector="tappedMenu:" destination="BYZ-38-t0r" id="66L-j5-8RZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="xmf-zx-j9d" id="HqW-Zd-maC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="4Ni-g6-rHW">
@@ -176,6 +179,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="mGr-WP-8el"/>
+                    <connections>
+                        <outlet property="cropDataIcon" destination="eZD-GO-mJd" id="GeL-z3-USL"/>
+                        <outlet property="droneConfigIcon" destination="9fY-PV-gPG" id="03u-AY-VbX"/>
+                        <outlet property="homeIcon" destination="2en-Fk-aQh" id="sjK-zn-idf"/>
+                        <outlet property="settingsIcon" destination="Cto-M1-r3i" id="0sx-z1-ZDy"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SCE-jt-Be1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -205,6 +214,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

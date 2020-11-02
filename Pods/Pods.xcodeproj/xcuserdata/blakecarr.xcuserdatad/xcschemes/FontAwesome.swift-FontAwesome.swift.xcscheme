@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A63EBE90A90287F6485FAF8CFBA1F312"
-               BuildableName = "DTMHeatmap.framework"
-               BlueprintName = "DTMHeatmap"
+               BlueprintIdentifier = "4DC20DD2E50259D674257304EC016C93"
+               BuildableName = "FontAwesome.swift.bundle"
+               BlueprintName = "FontAwesome.swift-FontAwesome.swift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -4,23 +4,27 @@ PODS:
   - Charts/Core (3.6.0)
   - CSV.swift (2.4.3)
   - DTMHeatmap (1.0)
+  - FontAwesome.swift (1.9.0)
 
 DEPENDENCIES:
   - Charts
   - CSV.swift
   - DTMHeatmap
+  - FontAwesome.swift
 
 SPEC REPOS:
   trunk:
     - Charts
     - CSV.swift
     - DTMHeatmap
+    - FontAwesome.swift
 
 SPEC CHECKSUMS:
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   CSV.swift: d38741b349c067b4a6db42237cb0e2974d21ccac
   DTMHeatmap: f5588af0730fbfe78c75d6d013f1932d7d327ab2
+  FontAwesome.swift: a403b88cec950511745ba8f2decd1b6a07346d13
 
-PODFILE CHECKSUM: 305b3cca802492136ad3a30f9ceb0bd11de26d1f
+PODFILE CHECKSUM: 55d3b0ecef0935a8f1baff4106072d03c3ae683c
 
 COCOAPODS: 1.10.0
