@@ -11,6 +11,8 @@
 		B81A4BA02546002A0087C4F9 /* droneViewMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A4B9F2546002A0087C4F9 /* droneViewMapDelegate.swift */; };
 		B81EC625252016BF003A602F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EC624252016BF003A602F /* MenuViewController.swift */; };
 		B81EC62925201D73003A602F /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EC62825201D73003A602F /* SlideInTransition.swift */; };
+		B855E19F2555F232007FF5B2 /* ideal_raspberrypi_output.csv in Resources */ = {isa = PBXBuildFile; fileRef = B855E19E2555F232007FF5B2 /* ideal_raspberrypi_output.csv */; };
+		B855E1A22555F2F4007FF5B2 /* cropDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B855E1A12555F2F4007FF5B2 /* cropDataManager.swift */; };
 		B873C7C525291A2D00F9F940 /* droneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B873C7C425291A2D00F9F940 /* droneView.xib */; };
 		B873C7C925291B3A00F9F940 /* droneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B873C7C825291B3A00F9F940 /* droneView.swift */; };
 		B8AB6B29251E4919005BF38F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB6B28251E4919005BF38F /* AppDelegate.swift */; };
@@ -30,6 +32,8 @@
 		B81A4B9F2546002A0087C4F9 /* droneViewMapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = droneViewMapDelegate.swift; sourceTree = "<group>"; };
 		B81EC624252016BF003A602F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B81EC62825201D73003A602F /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
+		B855E19E2555F232007FF5B2 /* ideal_raspberrypi_output.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ideal_raspberrypi_output.csv; sourceTree = "<group>"; };
+		B855E1A12555F2F4007FF5B2 /* cropDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cropDataManager.swift; sourceTree = "<group>"; };
 		B873C7C425291A2D00F9F940 /* droneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = droneView.xib; sourceTree = "<group>"; };
 		B873C7C825291B3A00F9F940 /* droneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = droneView.swift; sourceTree = "<group>"; };
 		B8AB6B25251E4919005BF38F /* cropTriage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cropTriage.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +100,7 @@
 		B8AB6B27251E4919005BF38F /* cropTriage */ = {
 			isa = PBXGroup;
 			children = (
+				B855E19E2555F232007FF5B2 /* ideal_raspberrypi_output.csv */,
 				B8AB6B36251E491A005BF38F /* Info.plist */,
 				B8AB6B28251E4919005BF38F /* AppDelegate.swift */,
 				B81EC624252016BF003A602F /* MenuViewController.swift */,
@@ -111,6 +116,7 @@
 				B81EC62825201D73003A602F /* SlideInTransition.swift */,
 				B8F3D9172550A23B005F67A0 /* cropView.xib */,
 				B8F3D91A2550A25D005F67A0 /* cropView.swift */,
+				B855E1A12555F2F4007FF5B2 /* cropDataManager.swift */,
 			);
 			path = cropTriage;
 			sourceTree = "<group>";
@@ -177,6 +183,7 @@
 				B8AB6B35251E491A005BF38F /* LaunchScreen.storyboard in Resources */,
 				B873C7C525291A2D00F9F940 /* droneView.xib in Resources */,
 				B8AB6B32251E491A005BF38F /* Assets.xcassets in Resources */,
+				B855E19F2555F232007FF5B2 /* ideal_raspberrypi_output.csv in Resources */,
 				B8AB6B30251E4919005BF38F /* Main.storyboard in Resources */,
 				B8F3D9182550A23B005F67A0 /* cropView.xib in Resources */,
 			);
@@ -231,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B855E1A22555F2F4007FF5B2 /* cropDataManager.swift in Sources */,
 				B8AB6B2D251E4919005BF38F /* HomeViewController.swift in Sources */,
 				B81A4BA02546002A0087C4F9 /* droneViewMapDelegate.swift in Sources */,
 				B8AB6B29251E4919005BF38F /* AppDelegate.swift in Sources */,

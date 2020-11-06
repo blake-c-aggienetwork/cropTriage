@@ -10,6 +10,7 @@ import MapKit
 import DTMHeatmap
 import Charts
 import CSV
+import Foundation
 
 class cropView: UIView {
     
@@ -17,6 +18,7 @@ class cropView: UIView {
     fileprivate let locationManager:CLLocationManager = CLLocationManager()
     let defaults = UserDefaults()
     var mapTypeIndex: Int = 0
+    var cropManager: cropDataManager = cropDataManager()
     
     // IB outlets
     @IBOutlet var contentView: UIView!
