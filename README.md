@@ -9,6 +9,9 @@ I was going to use multiple branches but it seemed like too much work.
 
 
 # Changelog
+> 11/6/2020
+> - Added CSV reading and parsing to cropview
+
 > 11/2/2020
 > - Added icons for app UI
 > - Changed color scheme of app a bit
