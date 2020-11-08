@@ -9,6 +9,10 @@ I was going to use multiple branches but it seemed like too much work.
 
 
 # Changelog
+> 11/7/2020
+> - Added generated data centered around TAMU golfcourse
+> - Added heatmap overlay capabilities
+
 > 11/6/2020
 > - Added CSV reading and parsing to cropview
 
@@ -61,11 +65,11 @@ I was going to use multiple branches but it seemed like too much work.
 | Data Model         | Class for managing, saving, and reading data is done. Data is persistent between app restarts | 10/13/20 |    😀     |
 | Debug              | App is logging relevant debugging information to console for above tests                      | 10/13/20 |    😀     |
 | Send GPS Data      | App is able to send GPS data for scanning to other subsystem                                  | 10/13/20 |          |
-| Crop Data View     | Crop data view page is created and has a map and placeholders for statistical info            | 10/20/20 |           |
-| ML/Statistics      | Crop data can be processed by App by ML or statistics algorithm and can display that info     | 10/27/20 |           |
+| Crop Data View     | Crop data view page is created and has a map and placeholders for statistical info            | 10/20/20 |     🥺      |
+| ML/Statistics      | Crop data can be processed by App by ML or statistics algorithm and can display that info     | 10/27/20 |    🤗       |
 | Receive Crop Data  | App can receive crop data from other subsystem                                                | 11/3/20  |           |
-| Data model update  | Data model is updated and tested again for persistence and usability                          | 11/10/20 |           |
-| Aesthetic          | App is made more aesthetic, add prettier icons, improve color palette                         | 11/10/20 |           |
+| Data model update  | Data model is updated and tested again for persistence and usability                          | 11/10/20 |   😧        |
+| Aesthetic          | App is made more aesthetic, add prettier icons, improve color palette                         | 11/10/20 |    😲       |
 | Debug again        | Ensure new parts of the app are debugging correctly                                           | 11/10/20 |           |
 | Redo All Tests     | Test all previous tests                                                                       | 11/17/20 |           |
 
