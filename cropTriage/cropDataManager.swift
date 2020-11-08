@@ -23,7 +23,7 @@ class cropDataManager{
     init() {
         
         //Load Test CSV data for now
-        self.fileNames.append("ideal_raspberrypi_output")
+        self.fileNames.append("datasetnew")
         self.loadCSV(fileName: fileNames[0])
         
     }
@@ -41,33 +41,28 @@ class cropDataManager{
         }
     }
     
-    func getHeatMapPoint(at: Int) -> NSDictionary {
-        // Get point location
-        let lat: CLLocationDegrees = points[at][0]
-        let long: CLLocationDegrees = points[at][1]
-        let point: MKMapPoint = MKMapPoint(x: lat, y: long)
-        // Get weight
-        let weight: Double = points[at][2]
-        // return dict
-        let dict: NSDictionary = [point: weight]
-        return dict
-    }
+//    func getHeatMapPoint(at: Int) -> NSDictionary {
+//        // Get point location
+//        let lat: CLLocationDegrees = points[at][0]
+//        let long: CLLocationDegrees = points[at][1]
+//        let point: MKMapPoint = MKMapPoint(x: lat, y: long)
+//        // Get weight
+//        let weight: Double = points[at][2]
+//        // return dict
+//        let dict: NSDictionary = [point: weight]
+//        return dict
+//    }
     
-    func getHeatMapPointsDict() -> NSDictionary{
-        let mutableDict: NSMutableDictionary = NSMutableDictionary()
+    func getHeatMapData() -> [NSObject: Double]{
+        var heatmapData: [NSObject: Double] = [:]
         for i in 0...points.endIndex-1{
-            // Get point location
-            let lat: CLLocationDegrees = points[i][0]
-            let long: CLLocationDegrees = points[i][1]
-            let point: MKMapPoint = MKMapPoint(x: lat, y: long)
-            // Get weight
-            let weight: Double = points[i][2]
-            // add dict
-            let dict: NSMutableDictionary = [point: weight]
-            mutableDict.addEntries(from: dict as! [AnyHashable : Any])
+            let coord = CLLocationCoordinate2D(latitude: points[i][0], longitude: points[i][1])
+            var point = MKMapPoint(coord)
+            let type = "{MKMapPoint=dd}"
+            let value = NSValue(bytes: &point, objCType: type)
+            heatmapData[value] = points[i][2]
         }
-        let finalDict = NSDictionary(dictionary: mutableDict)
-        return finalDict
+        return heatmapData
     }
     
     

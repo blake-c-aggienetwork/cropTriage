@@ -9,8 +9,6 @@ import UIKit
 import MapKit
 import DTMHeatmap
 import Charts
-import CSV
-import Foundation
 
 class cropView: UIView {
     
@@ -42,6 +40,14 @@ class cropView: UIView {
         default:
             mapView.mapType = MKMapType.standard
         }
+    }
+    
+    @IBAction func loadTestData(_ sender: Any) {
+        let heatMapOverlay = DTMHeatmap()
+        let heatMapData = cropManager.getHeatMapData()
+        heatMapOverlay.setData(heatMapData as [NSObject: AnyObject])
+        mapView.addOverlay(heatMapOverlay)
+        print("Added Heat Map Overlay")
     }
     
     // MARK: required inits
@@ -123,6 +129,8 @@ class cropView: UIView {
 
 // MARK: extension mapview delegate
 extension cropView: MKMapViewDelegate{
-    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        return DTMHeatmapRenderer(overlay: overlay)
+    }
     
 }
