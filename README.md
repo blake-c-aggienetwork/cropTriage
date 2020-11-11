@@ -9,6 +9,9 @@ I was going to use multiple branches but it seemed like too much work.
 
 
 # Changelog
+> 11/11/2020
+> - Added histogram for crop data
+
 > 11/7/2020
 > - Added generated data centered around TAMU golfcourse
 > - Added heatmap overlay capabilities
