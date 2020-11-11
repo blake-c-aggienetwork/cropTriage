@@ -22,16 +22,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eQY-RZ-fWh">
-                    <rect key="frame" x="304" y="20" width="788" height="794"/>
+                    <rect key="frame" x="492" y="20" width="600" height="794"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="788" id="KDn-jo-XHa"/>
+                        <constraint firstAttribute="width" constant="600" id="KDn-jo-XHa"/>
                     </constraints>
                 </mapView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cW-c7-AyM" userLabel="controlView">
-                    <rect key="frame" x="20" y="20" width="264" height="794"/>
+                    <rect key="frame" x="20" y="20" width="452" height="794"/>
                     <subviews>
                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IdU-Iu-6Rz">
-                            <rect key="frame" x="18.5" y="30" width="227" height="32"/>
+                            <rect key="frame" x="112.5" y="30" width="227" height="32"/>
                             <segments>
                                 <segment title="Standard"/>
                                 <segment title="Hybrid"/>
@@ -42,7 +42,7 @@
                             </connections>
                         </segmentedControl>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxO-1f-Ykj">
-                            <rect key="frame" x="58" y="91" width="148" height="40"/>
+                            <rect key="frame" x="152" y="91" width="148" height="40"/>
                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
                             <state key="normal" title="Load Test Data"/>
                             <connections>

@@ -12,7 +12,7 @@
 		B81EC625252016BF003A602F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EC624252016BF003A602F /* MenuViewController.swift */; };
 		B81EC62925201D73003A602F /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EC62825201D73003A602F /* SlideInTransition.swift */; };
 		B855E19F2555F232007FF5B2 /* ideal_raspberrypi_output.csv in Resources */ = {isa = PBXBuildFile; fileRef = B855E19E2555F232007FF5B2 /* ideal_raspberrypi_output.csv */; };
-		B855E1A22555F2F4007FF5B2 /* cropDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B855E1A12555F2F4007FF5B2 /* cropDataManager.swift */; };
+		B855E1A22555F2F4007FF5B2 /* CropDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B855E1A12555F2F4007FF5B2 /* CropDataManager.swift */; };
 		B873C7C525291A2D00F9F940 /* droneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B873C7C425291A2D00F9F940 /* droneView.xib */; };
 		B873C7C925291B3A00F9F940 /* droneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B873C7C825291B3A00F9F940 /* droneView.swift */; };
 		B89FF86825578A2E000397D7 /* datasetnew.csv in Resources */ = {isa = PBXBuildFile; fileRef = B89FF86725578A2E000397D7 /* datasetnew.csv */; };
@@ -34,7 +34,7 @@
 		B81EC624252016BF003A602F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B81EC62825201D73003A602F /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
 		B855E19E2555F232007FF5B2 /* ideal_raspberrypi_output.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ideal_raspberrypi_output.csv; sourceTree = "<group>"; };
-		B855E1A12555F2F4007FF5B2 /* cropDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cropDataManager.swift; sourceTree = "<group>"; };
+		B855E1A12555F2F4007FF5B2 /* CropDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropDataManager.swift; sourceTree = "<group>"; };
 		B873C7C425291A2D00F9F940 /* droneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = droneView.xib; sourceTree = "<group>"; };
 		B873C7C825291B3A00F9F940 /* droneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = droneView.swift; sourceTree = "<group>"; };
 		B89FF86725578A2E000397D7 /* datasetnew.csv */ = {isa = PBXFileReference; lastKnownFileType = file; path = datasetnew.csv; sourceTree = SOURCE_ROOT; };
@@ -119,7 +119,7 @@
 				B81EC62825201D73003A602F /* SlideInTransition.swift */,
 				B8F3D9172550A23B005F67A0 /* cropView.xib */,
 				B8F3D91A2550A25D005F67A0 /* cropView.swift */,
-				B855E1A12555F2F4007FF5B2 /* cropDataManager.swift */,
+				B855E1A12555F2F4007FF5B2 /* CropDataManager.swift */,
 			);
 			path = cropTriage;
 			sourceTree = "<group>";
@@ -242,7 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B855E1A22555F2F4007FF5B2 /* cropDataManager.swift in Sources */,
+				B855E1A22555F2F4007FF5B2 /* CropDataManager.swift in Sources */,
 				B8AB6B2D251E4919005BF38F /* HomeViewController.swift in Sources */,
 				B81A4BA02546002A0087C4F9 /* droneViewMapDelegate.swift in Sources */,
 				B8AB6B29251E4919005BF38F /* AppDelegate.swift in Sources */,

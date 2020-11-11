@@ -10,14 +10,16 @@ import MapKit
 import DTMHeatmap
 import Charts
 
-class cropView: UIView {
+class cropView: UIView, ChartViewDelegate {
     
     // MARK: data members
     fileprivate let locationManager:CLLocationManager = CLLocationManager()
     let defaults = UserDefaults()
     var mapTypeIndex: Int = 0
-    var cropManager: cropDataManager = cropDataManager()
+    var cropManager: CropDataManager = CropDataManager()
+    var barChart = BarChartView()
     
+
     // IB outlets
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var mapView: MKMapView!
@@ -47,7 +49,20 @@ class cropView: UIView {
         let heatMapData = cropManager.getHeatMapData()
         heatMapOverlay.setData(heatMapData as [NSObject: AnyObject])
         mapView.addOverlay(heatMapOverlay)
+        
         print("Added Heat Map Overlay")
+        
+        
+        let chartData = cropManager.getBarChartData()
+        chartData.barWidth = 9
+        chartData.highlightEnabled = false
+        barChart.pinchZoomEnabled = false
+        barChart.setScaleEnabled(false)
+        barChart.data = chartData
+        barChart.drawValueAboveBarEnabled = false
+        barChart.fitBars = true
+        
+        print("Added bar chart")
     }
     
     // MARK: required inits
@@ -62,7 +77,7 @@ class cropView: UIView {
     }
     
     private func commonInit(){
-        
+    
         // Load elements from .xib
         Bundle.main.loadNibNamed("cropView", owner: self, options: nil)
         addSubview(contentView)
@@ -71,8 +86,22 @@ class cropView: UIView {
         print("Loaded cropView.XIB")
         
         self.initMap() // init map
+        self.initChart() // init chart
         
         controlView.layer.cornerRadius = 10 // edit control view properties
+        
+    }
+    
+    // MARK: chart config
+    private func initChart(){
+        
+        barChart.delegate = self // This view acts on behalf of the chart view
+        barChart.frame = CGRect(x: 15, y: 165, width: controlView.frame.size.width-30, height: 300)
+//        barChart.center = chartViewHolder.center
+        
+        controlView.addSubview(barChart)
+        
+        barChart.noDataText = ""
     }
     
     // MARK: map config
@@ -133,4 +162,7 @@ extension cropView: MKMapViewDelegate{
         return DTMHeatmapRenderer(overlay: overlay)
     }
     
+    func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
+        // not implemented
+    }
 }
