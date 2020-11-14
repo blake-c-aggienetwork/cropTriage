@@ -25,6 +25,7 @@ class cropView: UIView, ChartViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapTypeSelector: UISegmentedControl!
     @IBOutlet weak var controlView: UIView!
+    @IBOutlet weak var dataSelector: UIPickerView!
     
     
     // MARK: IB ACTIONS
@@ -45,9 +46,27 @@ class cropView: UIView, ChartViewDelegate {
     }
     
     @IBAction func loadTestData(_ sender: Any) {
+        // Data manager will load selected data
+        let selectedDataIndex = dataSelector.selectedRow(inComponent: 0)
+        print("Loading data from: " + cropManager.fileNames[selectedDataIndex])
+        if cropManager.loadCSV(fileName: cropManager.fileNames[selectedDataIndex]) == false{
+            print("Data Failed to load")
+            
+            return
+        }
+        
+        // Clear heatMaps
+        if mapView.overlays.count >= 1{
+            print("removing overlays")
+            mapView.removeOverlays(mapView.overlays)
+        }
+        
         let heatMapOverlay = DTMHeatmap()
         let heatMapData = cropManager.getHeatMapData()
         heatMapOverlay.setData(heatMapData as [NSObject: AnyObject])
+//        let colorProvider = DTMColorProvider()
+//        heatMapOverlay.colorProvider =
+//        have not figured out how to configure heatmap colors yet
         mapView.addOverlay(heatMapOverlay)
         
         print("Added Heat Map Overlay")
@@ -56,13 +75,9 @@ class cropView: UIView, ChartViewDelegate {
         let chartData = cropManager.getBarChartData()
         chartData.barWidth = 9
         chartData.highlightEnabled = false
-        barChart.pinchZoomEnabled = false
-        barChart.setScaleEnabled(false)
         barChart.data = chartData
-        barChart.drawValueAboveBarEnabled = false
-        barChart.fitBars = true
         
-        print("Added bar chart")
+        print("Bar Chart data updated")
     }
     
     // MARK: required inits
@@ -87,21 +102,36 @@ class cropView: UIView, ChartViewDelegate {
         
         self.initMap() // init map
         self.initChart() // init chart
+        self.initDataPicker() // init data picker
         
         controlView.layer.cornerRadius = 10 // edit control view properties
         
     }
     
+    // MARK: data picker config
+    private func initDataPicker(){
+        dataSelector.dataSource = cropManager
+        dataSelector.delegate = self
+        
+        dataSelector.reloadAllComponents()
+    }
+    
+    
     // MARK: chart config
     private func initChart(){
         
         barChart.delegate = self // This view acts on behalf of the chart view
-        barChart.frame = CGRect(x: 15, y: 165, width: controlView.frame.size.width-30, height: 300)
+        barChart.frame = CGRect(x: 15, y: 365, width: controlView.frame.size.width-30, height: 300)
 //        barChart.center = chartViewHolder.center
         
         controlView.addSubview(barChart)
         
         barChart.noDataText = ""
+        
+        barChart.pinchZoomEnabled = false
+        barChart.setScaleEnabled(false)
+        barChart.drawValueAboveBarEnabled = false
+        barChart.fitBars = true
     }
     
     // MARK: map config
@@ -165,4 +195,13 @@ extension cropView: MKMapViewDelegate{
     func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
         // not implemented
     }
+}
+
+
+// MARK: extension picker delegate
+extension cropView: UIPickerViewDelegate{
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return cropManager.fileNames[row]
+    }
+    
 }

@@ -15,7 +15,7 @@
 		B855E1A22555F2F4007FF5B2 /* CropDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B855E1A12555F2F4007FF5B2 /* CropDataManager.swift */; };
 		B873C7C525291A2D00F9F940 /* droneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B873C7C425291A2D00F9F940 /* droneView.xib */; };
 		B873C7C925291B3A00F9F940 /* droneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B873C7C825291B3A00F9F940 /* droneView.swift */; };
-		B89FF86825578A2E000397D7 /* datasetnew.csv in Resources */ = {isa = PBXBuildFile; fileRef = B89FF86725578A2E000397D7 /* datasetnew.csv */; };
+		B89FF86825578A2E000397D7 /* Demo Data.csv in Resources */ = {isa = PBXBuildFile; fileRef = B89FF86725578A2E000397D7 /* Demo Data.csv */; };
 		B8AB6B29251E4919005BF38F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB6B28251E4919005BF38F /* AppDelegate.swift */; };
 		B8AB6B2B251E4919005BF38F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB6B2A251E4919005BF38F /* SceneDelegate.swift */; };
 		B8AB6B2D251E4919005BF38F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AB6B2C251E4919005BF38F /* HomeViewController.swift */; };
@@ -37,7 +37,7 @@
 		B855E1A12555F2F4007FF5B2 /* CropDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropDataManager.swift; sourceTree = "<group>"; };
 		B873C7C425291A2D00F9F940 /* droneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = droneView.xib; sourceTree = "<group>"; };
 		B873C7C825291B3A00F9F940 /* droneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = droneView.swift; sourceTree = "<group>"; };
-		B89FF86725578A2E000397D7 /* datasetnew.csv */ = {isa = PBXFileReference; lastKnownFileType = file; path = datasetnew.csv; sourceTree = SOURCE_ROOT; };
+		B89FF86725578A2E000397D7 /* Demo Data.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Demo Data.csv"; sourceTree = SOURCE_ROOT; };
 		B8AB6B25251E4919005BF38F /* cropTriage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cropTriage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8AB6B28251E4919005BF38F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8AB6B2A251E4919005BF38F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				B855E19E2555F232007FF5B2 /* ideal_raspberrypi_output.csv */,
-				B89FF86725578A2E000397D7 /* datasetnew.csv */,
+				B89FF86725578A2E000397D7 /* Demo Data.csv */,
 				B8AB6B36251E491A005BF38F /* Info.plist */,
 				B8AB6B28251E4919005BF38F /* AppDelegate.swift */,
 				B81EC624252016BF003A602F /* MenuViewController.swift */,
@@ -185,7 +185,7 @@
 			files = (
 				B8AB6B35251E491A005BF38F /* LaunchScreen.storyboard in Resources */,
 				B873C7C525291A2D00F9F940 /* droneView.xib in Resources */,
-				B89FF86825578A2E000397D7 /* datasetnew.csv in Resources */,
+				B89FF86825578A2E000397D7 /* Demo Data.csv in Resources */,
 				B8AB6B32251E491A005BF38F /* Assets.xcassets in Resources */,
 				B855E19F2555F232007FF5B2 /* ideal_raspberrypi_output.csv in Resources */,
 				B8AB6B30251E4919005BF38F /* Main.storyboard in Resources */,

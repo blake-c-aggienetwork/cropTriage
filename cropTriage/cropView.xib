@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="Lt2-hf-H7H"/>
                 <outlet property="controlView" destination="1cW-c7-AyM" id="s39-aG-RzO"/>
+                <outlet property="dataSelector" destination="ySk-E6-PZv" id="MdX-jc-MfU"/>
                 <outlet property="mapTypeSelector" destination="IdU-Iu-6Rz" id="b6I-nL-M87"/>
                 <outlet property="mapView" destination="eQY-RZ-fWh" id="ehP-Gf-5Rw"/>
             </connections>
@@ -41,8 +42,14 @@
                                 <action selector="selectedNewMapType:" destination="-1" eventType="valueChanged" id="ptQ-KF-zCO"/>
                             </connections>
                         </segmentedControl>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ySk-E6-PZv">
+                            <rect key="frame" x="15" y="91" width="215" height="216"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="215" id="iJ0-WQ-gqX"/>
+                            </constraints>
+                        </pickerView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxO-1f-Ykj">
-                            <rect key="frame" x="152" y="91" width="148" height="40"/>
+                            <rect key="frame" x="260" y="179" width="148" height="40"/>
                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
                             <state key="normal" title="Load Test Data"/>
                             <connections>
@@ -53,9 +60,11 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="IdU-Iu-6Rz" firstAttribute="top" secondItem="1cW-c7-AyM" secondAttribute="top" constant="30" id="5nm-si-f6V"/>
-                        <constraint firstItem="UxO-1f-Ykj" firstAttribute="top" secondItem="IdU-Iu-6Rz" secondAttribute="bottom" constant="30" id="7iN-q4-UCH"/>
+                        <constraint firstItem="UxO-1f-Ykj" firstAttribute="top" secondItem="IdU-Iu-6Rz" secondAttribute="bottom" constant="118" id="7iN-q4-UCH"/>
+                        <constraint firstItem="ySk-E6-PZv" firstAttribute="top" secondItem="IdU-Iu-6Rz" secondAttribute="bottom" constant="30" id="HXk-5z-7gW"/>
                         <constraint firstItem="IdU-Iu-6Rz" firstAttribute="centerX" secondItem="1cW-c7-AyM" secondAttribute="centerX" id="Xfh-Vk-g42"/>
-                        <constraint firstItem="UxO-1f-Ykj" firstAttribute="centerX" secondItem="1cW-c7-AyM" secondAttribute="centerX" id="pWc-mD-dZM"/>
+                        <constraint firstItem="ySk-E6-PZv" firstAttribute="leading" secondItem="1cW-c7-AyM" secondAttribute="leading" constant="15" id="wQD-lI-Fpo"/>
+                        <constraint firstItem="UxO-1f-Ykj" firstAttribute="leading" secondItem="ySk-E6-PZv" secondAttribute="trailing" constant="30" id="zks-Nm-emv"/>
                     </constraints>
                 </view>
             </subviews>
