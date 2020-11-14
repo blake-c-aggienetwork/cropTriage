@@ -36,14 +36,19 @@ class CropDataManager{
     init() {
         
         //Load Test CSV data for now
-        self.fileNames.append("datasetnew")
-        self.loadCSV(fileName: fileNames[0])
+        self.fileNames.append("Demo Data")
+        self.fileNames.append("Non-Existant Data")
         
     }
     
-    private func loadCSV(fileName: String){
+    private func clearData(){
+        points.removeAll()
+    }
+    
+    func loadCSV(fileName: String) -> Bool{
+        self.clearData()
         // load CSV
-        let fileURL = Bundle.main.path(forResource: fileName, ofType: "csv")!
+        guard let fileURL = Bundle.main.path(forResource: fileName, ofType: "csv") else { return false}
         let fileStream = InputStream(fileAtPath: fileURL)!
         let csv = try! CSVReader(stream: fileStream, hasHeaderRow: true)
         // print header info and rows
@@ -54,6 +59,7 @@ class CropDataManager{
                                        z: Double(row[2]) ?? 0.0)
             self.points.append(point)
         }
+        return true
     }
 
     // MARK: getters
@@ -115,4 +121,67 @@ class CropDataManager{
         return data
     }
     
+}
+
+// MARK: UI picker extension
+extension CropDataManager: UIPickerViewDataSource{
+    func isEqual(_ object: Any?) -> Bool {
+        return false
+    }
+    
+    var hash: Int {
+        return 0
+    }
+    
+    var superclass: AnyClass? {
+        return nil
+    }
+    
+    func `self`() -> Self {
+        return self
+    }
+    
+    func perform(_ aSelector: Selector!) -> Unmanaged<AnyObject>! {
+        return nil
+    }
+    
+    func perform(_ aSelector: Selector!, with object: Any!) -> Unmanaged<AnyObject>! {
+        return nil
+    }
+    
+    func perform(_ aSelector: Selector!, with object1: Any!, with object2: Any!) -> Unmanaged<AnyObject>! {
+        return nil
+    }
+    
+    func isProxy() -> Bool {
+        return false
+    }
+    
+    func isKind(of aClass: AnyClass) -> Bool {
+        return false
+    }
+    
+    func isMember(of aClass: AnyClass) -> Bool {
+        return false
+    }
+    
+    func conforms(to aProtocol: Protocol) -> Bool {
+        return false
+    }
+    
+    func responds(to aSelector: Selector!) -> Bool {
+        return false
+    }
+    
+    var description: String {
+        return "Idk why this thing has so many goddamn protocol required functions"
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return fileNames.count
+    }
 }
