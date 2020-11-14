@@ -9,6 +9,10 @@ I was going to use multiple branches but it seemed like too much work.
 
 
 # Changelog
+> 11/14/2020
+> - Added data selection wheel for crop view
+> - Added exception protection for non-existent files
+
 > 11/11/2020
 > - Added histogram for crop data
 
