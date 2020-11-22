@@ -109,6 +109,17 @@ class droneView: UIView, UIGestureRecognizerDelegate{
         mapView.isZoomEnabled = true
         
     }
+    @IBAction func printLocationsToConsole(_ sender: Any) {
+        if markerManager.getPinCnt() == 0{
+            return
+        }
+        else{
+            print("Coordinates selected:")
+            for pin in markerManager.pinArr{
+                print(pin.coordinate)
+            }
+        }
+    }
     
     
     func updateTime(){

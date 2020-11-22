@@ -13,6 +13,8 @@
 		B81EC62925201D73003A602F /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EC62825201D73003A602F /* SlideInTransition.swift */; };
 		B855E19F2555F232007FF5B2 /* ideal_raspberrypi_output.csv in Resources */ = {isa = PBXBuildFile; fileRef = B855E19E2555F232007FF5B2 /* ideal_raspberrypi_output.csv */; };
 		B855E1A22555F2F4007FF5B2 /* CropDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B855E1A12555F2F4007FF5B2 /* CropDataManager.swift */; };
+		B8607BF82569F0330065657A /* 10thousand.csv in Resources */ = {isa = PBXBuildFile; fileRef = B8607BF72569F0330065657A /* 10thousand.csv */; };
+		B8607BFF2569F1140065657A /* 1000.csv in Resources */ = {isa = PBXBuildFile; fileRef = B8607BFE2569F1140065657A /* 1000.csv */; };
 		B873C7C525291A2D00F9F940 /* droneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B873C7C425291A2D00F9F940 /* droneView.xib */; };
 		B873C7C925291B3A00F9F940 /* droneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B873C7C825291B3A00F9F940 /* droneView.swift */; };
 		B89FF86825578A2E000397D7 /* Demo Data.csv in Resources */ = {isa = PBXBuildFile; fileRef = B89FF86725578A2E000397D7 /* Demo Data.csv */; };
@@ -25,6 +27,9 @@
 		B8B5B80C2532960300B59541 /* markerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B5B80B2532960300B59541 /* markerData.swift */; };
 		B8F3D9182550A23B005F67A0 /* cropView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8F3D9172550A23B005F67A0 /* cropView.xib */; };
 		B8F3D91B2550A25D005F67A0 /* cropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F3D91A2550A25D005F67A0 /* cropView.swift */; };
+		B8FEC3512565899900D1DBD7 /* errorDataset.csv in Resources */ = {isa = PBXBuildFile; fileRef = B8FEC3502565899900D1DBD7 /* errorDataset.csv */; };
+		B8FEC35525658A7000D1DBD7 /* 1million.csv in Resources */ = {isa = PBXBuildFile; fileRef = B8FEC35425658A7000D1DBD7 /* 1million.csv */; };
+		B8FEC35825658CA900D1DBD7 /* 1hundredthousand.csv in Resources */ = {isa = PBXBuildFile; fileRef = B8FEC35725658CA900D1DBD7 /* 1hundredthousand.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,8 @@
 		B81EC62825201D73003A602F /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
 		B855E19E2555F232007FF5B2 /* ideal_raspberrypi_output.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ideal_raspberrypi_output.csv; sourceTree = "<group>"; };
 		B855E1A12555F2F4007FF5B2 /* CropDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropDataManager.swift; sourceTree = "<group>"; };
+		B8607BF72569F0330065657A /* 10thousand.csv */ = {isa = PBXFileReference; lastKnownFileType = file; path = 10thousand.csv; sourceTree = SOURCE_ROOT; };
+		B8607BFE2569F1140065657A /* 1000.csv */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1000.csv; sourceTree = SOURCE_ROOT; };
 		B873C7C425291A2D00F9F940 /* droneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = droneView.xib; sourceTree = "<group>"; };
 		B873C7C825291B3A00F9F940 /* droneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = droneView.swift; sourceTree = "<group>"; };
 		B89FF86725578A2E000397D7 /* Demo Data.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Demo Data.csv"; sourceTree = SOURCE_ROOT; };
@@ -49,6 +56,9 @@
 		B8B5B80B2532960300B59541 /* markerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = markerData.swift; sourceTree = "<group>"; };
 		B8F3D9172550A23B005F67A0 /* cropView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cropView.xib; sourceTree = "<group>"; };
 		B8F3D91A2550A25D005F67A0 /* cropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cropView.swift; sourceTree = "<group>"; };
+		B8FEC3502565899900D1DBD7 /* errorDataset.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = errorDataset.csv; sourceTree = SOURCE_ROOT; };
+		B8FEC35425658A7000D1DBD7 /* 1million.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 1million.csv; sourceTree = SOURCE_ROOT; };
+		B8FEC35725658CA900D1DBD7 /* 1hundredthousand.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 1hundredthousand.csv; sourceTree = SOURCE_ROOT; };
 		EF0EBEA5320D00EF79A5EE13 /* Pods_cropTriage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cropTriage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,7 +113,12 @@
 			isa = PBXGroup;
 			children = (
 				B855E19E2555F232007FF5B2 /* ideal_raspberrypi_output.csv */,
+				B8FEC35425658A7000D1DBD7 /* 1million.csv */,
 				B89FF86725578A2E000397D7 /* Demo Data.csv */,
+				B8FEC3502565899900D1DBD7 /* errorDataset.csv */,
+				B8FEC35725658CA900D1DBD7 /* 1hundredthousand.csv */,
+				B8607BFE2569F1140065657A /* 1000.csv */,
+				B8607BF72569F0330065657A /* 10thousand.csv */,
 				B8AB6B36251E491A005BF38F /* Info.plist */,
 				B8AB6B28251E4919005BF38F /* AppDelegate.swift */,
 				B81EC624252016BF003A602F /* MenuViewController.swift */,
@@ -186,10 +201,15 @@
 				B8AB6B35251E491A005BF38F /* LaunchScreen.storyboard in Resources */,
 				B873C7C525291A2D00F9F940 /* droneView.xib in Resources */,
 				B89FF86825578A2E000397D7 /* Demo Data.csv in Resources */,
+				B8607BFF2569F1140065657A /* 1000.csv in Resources */,
 				B8AB6B32251E491A005BF38F /* Assets.xcassets in Resources */,
 				B855E19F2555F232007FF5B2 /* ideal_raspberrypi_output.csv in Resources */,
 				B8AB6B30251E4919005BF38F /* Main.storyboard in Resources */,
+				B8FEC3512565899900D1DBD7 /* errorDataset.csv in Resources */,
 				B8F3D9182550A23B005F67A0 /* cropView.xib in Resources */,
+				B8FEC35525658A7000D1DBD7 /* 1million.csv in Resources */,
+				B8607BF82569F0330065657A /* 10thousand.csv in Resources */,
+				B8FEC35825658CA900D1DBD7 /* 1hundredthousand.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

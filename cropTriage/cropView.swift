@@ -73,7 +73,7 @@ class cropView: UIView, ChartViewDelegate {
         
         
         let chartData = cropManager.getBarChartData()
-        chartData.barWidth = 9
+//        chartData.barWidth = 10
         chartData.highlightEnabled = false
         barChart.data = chartData
         

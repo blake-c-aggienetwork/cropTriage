@@ -38,6 +38,11 @@ class CropDataManager{
         //Load Test CSV data for now
         self.fileNames.append("Demo Data")
         self.fileNames.append("Non-Existant Data")
+        self.fileNames.append("1million")
+        self.fileNames.append("errorDataset")
+        self.fileNames.append("1hundredthousand")
+        self.fileNames.append("10thousand")
+        self.fileNames.append("1000")
         
     }
     
@@ -49,7 +54,7 @@ class CropDataManager{
         self.clearData()
         // load CSV
         guard let fileURL = Bundle.main.path(forResource: fileName, ofType: "csv") else { return false}
-        let fileStream = InputStream(fileAtPath: fileURL)!
+        guard let fileStream = InputStream(fileAtPath: fileURL) else {return false}
         let csv = try! CSVReader(stream: fileStream, hasHeaderRow: true)
         // print header info and rows
         print("Loaded CSV with headers: \(csv.headerRow!)")
@@ -66,18 +71,20 @@ class CropDataManager{
     func getHeatMapData() -> [NSObject: Double]{
         var heatmapData: [NSObject: Double] = [:]
         for i in 0...points.endIndex-1{
-            let coord = CLLocationCoordinate2D(latitude: points[i].x, longitude: points[i].y)
-            var point = MKMapPoint(coord)
-            let type = "{MKMapPoint=dd}"
-            let value = NSValue(bytes: &point, objCType: type)
-            heatmapData[value] = points[i].z
+            if points[i].z > 0.5{
+                let coord = CLLocationCoordinate2D(latitude: points[i].x, longitude: points[i].y)
+                var point = MKMapPoint(coord)
+                let type = "{MKMapPoint=dd}"
+                let value = NSValue(bytes: &point, objCType: type)
+                heatmapData[value] = points[i].z
+            }
         }
         return heatmapData
     }
     
     func getBarChartData() -> BarChartData{
         // calculate range of data
-        let binCnt = 20
+        let binCnt = 20.0
         let minVal:Double = 0
         var maxVal:Double = 0
         for i in 0...points.endIndex-1{
@@ -86,33 +93,36 @@ class CropDataManager{
             }
         }
         // create bin ranges
-        let step = Int(maxVal)/(binCnt)
+        let step = maxVal/(binCnt)
         var freqRange = Array<Double>()
         for i in stride(from: minVal, through: maxVal, by: Double.Stride(step)){
             freqRange.append(i)
         }
         freqRange[freqRange.endIndex-1] = maxVal
         freqRange.remove(at: 0)
+        print(freqRange)
         
         // sort values into bins
-        var bins = Array(repeating: 0.0, count: 20)
-//        print(bins)
+        var bins = Array(repeating: 0.0, count: Int(binCnt))
+        //        print(bins)
         var binNum = 0
         for i in 0...points.endIndex-1{
-            for j in 0...freqRange.endIndex-1{
-                let rightEdge = freqRange[j]
-                if points[i].z <= rightEdge{
-                    binNum = j
-//                    print(binNum)
-                    break;
+            if points[i].z > freqRange[5]{
+                for j in 0...freqRange.endIndex-1{
+                    let rightEdge = freqRange[j]
+                    if points[i].z <= rightEdge{
+                        binNum = j
+                        // print(binNum)
+                        break;
+                    }
                 }
+                bins[binNum] += 1
             }
-            bins[binNum] += 1
         }
         
         // convert to barchatdata type
         var entries = [BarChartDataEntry]()
-        for i in 0...binCnt-1{
+        for i in 0...Int(binCnt)-1{
             entries.append(BarChartDataEntry(x: freqRange[i], y: bins[i]))
             
         }
