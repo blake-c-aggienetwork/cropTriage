@@ -9,6 +9,10 @@ I was going to use multiple branches but it seemed like too much work.
 
 
 # Changelog
+> 11/21/2020
+> - Added more datasets for demo
+> - Added button to print marker data to console
+
 > 11/14/2020
 > - Added data selection wheel for crop view
 > - Added exception protection for non-existent files
