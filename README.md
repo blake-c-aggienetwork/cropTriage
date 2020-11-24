@@ -12,6 +12,7 @@ I was going to use multiple branches but it seemed like too much work.
 > 11/21/2020
 > - Added more datasets for demo
 > - Added button to print marker data to console
+> - Prepared application for demo
 
 > 11/14/2020
 > - Added data selection wheel for crop view
@@ -82,6 +83,6 @@ I was going to use multiple branches but it seemed like too much work.
 | Data model update  | Data model is updated and tested again for persistence and usability                          | 11/10/20 |   😧        |
 | Aesthetic          | App is made more aesthetic, add prettier icons, improve color palette                         | 11/10/20 |    😲       |
 | Debug again        | Ensure new parts of the app are debugging correctly                                           | 11/10/20 |           |
-| Redo All Tests     | Test all previous tests                                                                       | 11/17/20 |           |
+| Redo All Tests     | Test all previous tests                                                                       | 11/17/20 |      😙     |
 
 
