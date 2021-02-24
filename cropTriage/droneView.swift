@@ -90,23 +90,23 @@ class droneView: UIView, UIGestureRecognizerDelegate{
     
     @IBAction func handleTap(_ sender: UITapGestureRecognizer) {
         
-        print("double tapped")
-        mapView.isZoomEnabled = false
-        print("temp disabled zoom")
-        
-        let location = sender.location(in: mapView)
-        let coord = mapView.convert(location, toCoordinateFrom: mapView)
-        
-        print("Attemping to create marker from double tap at")
-        
-        print(coord)
-        markerManager.addPoint(lat: coord.latitude, long: coord.longitude, isWayPoint: false)
-        mapView.addAnnotation(markerManager.getLastPin())
-        mapView.addOverlay(markerManager.getLastCircle())
-        
-        self.renderLines()
-        
-        mapView.isZoomEnabled = true
+//        print("double tapped")
+//        mapView.isZoomEnabled = false
+//        print("temp disabled zoom")
+//        
+//        let location = sender.location(in: mapView)
+//        let coord = mapView.convert(location, toCoordinateFrom: mapView)
+//        
+//        print("Attemping to create marker from double tap at")
+//        
+//        print(coord)
+//        markerManager.addPoint(lat: coord.latitude, long: coord.longitude, isWayPoint: false)
+//        mapView.addAnnotation(markerManager.getLastPin())
+//        mapView.addOverlay(markerManager.getLastCircle())
+//        
+//        self.renderLines()
+//        
+//        mapView.isZoomEnabled = true
         
     }
     @IBAction func printLocationsToConsole(_ sender: Any) {
