@@ -65,6 +65,16 @@ class MarkerDataManger {
         
     }
     
+    func getDict() -> Dictionary<String, String>{
+        var scanDict: Dictionary<String,String> = [:]
+        
+        for i in 0...getPinCnt()-1{
+            scanDict["\(i+1)"] = "\(getPin(at: i).coordinate.latitude),\(getPin(at: i).coordinate.longitude)"
+        }
+        
+        return scanDict
+    }
+    
     func getPin(at: Int) -> MKPointAnnotation{
         return pinArr[at]
     }

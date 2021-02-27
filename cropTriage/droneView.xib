@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad10_5" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -75,12 +75,12 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="e1p-QZ-rt7">
-                            <rect key="frame" x="14" y="630" width="239" height="38"/>
+                            <rect key="frame" x="47" y="538" width="170" height="38"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                            <state key="normal" title="Print Locations to Console"/>
+                            <state key="normal" title="Send Markers Test"/>
                             <connections>
-                                <action selector="printLocationsToConsole:" destination="-1" eventType="touchUpInside" id="nhM-Ms-gEN"/>
+                                <action selector="printLocationsToConsole:" destination="-1" eventType="touchUpInside" id="WjI-so-KjA"/>
                             </connections>
                         </button>
                     </subviews>
@@ -88,6 +88,7 @@
                     <constraints>
                         <constraint firstItem="kcG-NQ-l29" firstAttribute="centerX" secondItem="q1x-Jn-sjl" secondAttribute="centerX" id="HXD-qh-Usb"/>
                         <constraint firstItem="QOu-sb-Shc" firstAttribute="centerX" secondItem="q1x-Jn-sjl" secondAttribute="centerX" id="OFD-aW-FG5"/>
+                        <constraint firstItem="TG1-Ub-jNb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="e1p-QZ-rt7" secondAttribute="bottom" constant="60" id="Okg-oL-oFX"/>
                         <constraint firstItem="QOu-sb-Shc" firstAttribute="top" secondItem="q1x-Jn-sjl" secondAttribute="top" constant="30" id="SJI-HH-WXb"/>
                         <constraint firstItem="ii2-gm-pNS" firstAttribute="centerX" secondItem="q1x-Jn-sjl" secondAttribute="centerX" id="WGr-3v-x9h"/>
                         <constraint firstItem="TG1-Ub-jNb" firstAttribute="centerX" secondItem="q1x-Jn-sjl" secondAttribute="centerX" id="ZAk-LZ-v6T"/>

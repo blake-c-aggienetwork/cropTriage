@@ -17,6 +17,7 @@ class cropView: UIView, ChartViewDelegate {
     let defaults = UserDefaults()
     var mapTypeIndex: Int = 0
     var cropManager: CropDataManager = CropDataManager()
+    var network = NetworkManager()
     var barChart = BarChartView()
     
 
@@ -79,6 +80,12 @@ class cropView: UIView, ChartViewDelegate {
         
         print("Bar Chart data updated")
     }
+    
+    @IBAction func downloadScan(){
+        network.lidarGet()
+        
+    }
+    
     
     // MARK: required inits
     override init(frame: CGRect){

@@ -12,7 +12,7 @@ serverPort = 25565
 
 ## this class is intended to mirror the LocationCoordinate2D struct within swift MapKit
 ## it calculates the distance between 2 coordinates slightly different
-class LocationCoordinate2D():
+class LocationCoordinate2D:
     latitude = 0.0
     longitude = 0.0
 
@@ -21,11 +21,8 @@ class LocationCoordinate2D():
         self.longitude = double(0.0)
 
     def __init__(self, latitude, longitude):
-        if (-90.0 <= latitude <= 90.0) and (-90.0 <= longitude <= 90.0):
-            self.latitude = double(latitude)
-            self.longitude = double(longitude)
-        else:
-            print("Not valid coordinates")
+        self.latitude = double(latitude)
+        self.longitude = double(longitude)
 
     def __str__(self):
         return f"LocationCoordinate2D(latitude: {self.latitude} longitude: {self.longitude})"
@@ -47,7 +44,7 @@ class LocationCoordinate2D():
 
 
 ## this class is intended to control the drone, managing drone state and accessing saved files
-class Drone():
+class Drone:
     # data members
     scanList = []  # this is an array of LocationCoordinate2D for scanning
     curLocation = LocationCoordinate2D(0.0, 0.0)  # this is the current location of the drone
@@ -77,7 +74,7 @@ class Drone():
         # build dict scanlist
         list = {}
         for i in range(0, len(self.scanList)):
-            list[str(i)] = f"{self.scanList[i].latitude},{self.scanList[i].longitude}"
+            list[str(i+1)] = f"{self.scanList[i].latitude},{self.scanList[i].longitude}"
         return list
 
     def getHomeLocation(self):
@@ -117,11 +114,6 @@ class Drone():
             return False
 
 
-# required inializers for web api
-app = Flask(__name__)
-api = Api(app)
-
-
 ## these classes implement methods for the REST API
 class StateAPI(Resource):
 
@@ -129,6 +121,7 @@ class StateAPI(Resource):
         print("USER GET - droneStatus")
         list = myDrone.getStatus()
         return jsonify(list)
+
 
 class ScanAPI(Resource):
 
@@ -139,11 +132,12 @@ class ScanAPI(Resource):
 
     def post(self):
         print("------- USER POST - scanList --------")
-        list = request.json
-        myDrone.setScanList(list)
+        scanList = request.json
+        myDrone.setScanList(scanList)
         myDrone.setState(2)
         myDrone.beginScan()
         return {"status": "successfully received scan list... starting scan"}
+
 
 class LidarDataAPI(Resource):
 
@@ -159,6 +153,7 @@ class LidarDataAPI(Resource):
         else:
             return make_response(jsonify({"status": "delete failed"}), 401)
 
+
 class HomeAPI(Resource):
 
     def get(self):
@@ -171,11 +166,18 @@ class HomeAPI(Resource):
         myDrone.setState(1)
         return {"status": f"set home to {myDrone.getHomeLocation()} ... drone now waiting for scan list"}
 
+
 class CurrentLocationAPI(Resource):
     def get(self):
         print("--------- USER GET - Current Location ----------")
         curLocation = myDrone.curLocation
         return jsonify({"latitude": str(double(curLocation.latitude)), "longitude": str(double(curLocation.longitude))})
+
+
+
+# required inializers for web api
+app = Flask(__name__)
+api = Api(app)
 
 ## adds url paths to the web api
 api.add_resource(StateAPI, '/state')

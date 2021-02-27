@@ -25,6 +25,7 @@
 		B8AB6B32251E491A005BF38F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8AB6B31251E491A005BF38F /* Assets.xcassets */; };
 		B8AB6B35251E491A005BF38F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8AB6B33251E491A005BF38F /* LaunchScreen.storyboard */; };
 		B8B5B80C2532960300B59541 /* markerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B5B80B2532960300B59541 /* markerData.swift */; };
+		B8C7083B25EAE30800E29885 /* networkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C7083A25EAE30800E29885 /* networkManager.swift */; };
 		B8F3D9182550A23B005F67A0 /* cropView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8F3D9172550A23B005F67A0 /* cropView.xib */; };
 		B8F3D91B2550A25D005F67A0 /* cropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F3D91A2550A25D005F67A0 /* cropView.swift */; };
 		B8FEC3512565899900D1DBD7 /* errorDataset.csv in Resources */ = {isa = PBXBuildFile; fileRef = B8FEC3502565899900D1DBD7 /* errorDataset.csv */; };
@@ -40,8 +41,8 @@
 		B81EC62825201D73003A602F /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
 		B855E19E2555F232007FF5B2 /* ideal_raspberrypi_output.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ideal_raspberrypi_output.csv; sourceTree = "<group>"; };
 		B855E1A12555F2F4007FF5B2 /* CropDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropDataManager.swift; sourceTree = "<group>"; };
-		B8607BF72569F0330065657A /* 10thousand.csv */ = {isa = PBXFileReference; lastKnownFileType = file; path = 10thousand.csv; sourceTree = SOURCE_ROOT; };
-		B8607BFE2569F1140065657A /* 1000.csv */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1000.csv; sourceTree = SOURCE_ROOT; };
+		B8607BF72569F0330065657A /* 10thousand.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 10thousand.csv; sourceTree = SOURCE_ROOT; };
+		B8607BFE2569F1140065657A /* 1000.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 1000.csv; sourceTree = SOURCE_ROOT; };
 		B873C7C425291A2D00F9F940 /* droneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = droneView.xib; sourceTree = "<group>"; };
 		B873C7C825291B3A00F9F940 /* droneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = droneView.swift; sourceTree = "<group>"; };
 		B89FF86725578A2E000397D7 /* Demo Data.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Demo Data.csv"; sourceTree = SOURCE_ROOT; };
@@ -54,6 +55,7 @@
 		B8AB6B34251E491A005BF38F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8AB6B36251E491A005BF38F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8B5B80B2532960300B59541 /* markerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = markerData.swift; sourceTree = "<group>"; };
+		B8C7083A25EAE30800E29885 /* networkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkManager.swift; sourceTree = "<group>"; };
 		B8F3D9172550A23B005F67A0 /* cropView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cropView.xib; sourceTree = "<group>"; };
 		B8F3D91A2550A25D005F67A0 /* cropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cropView.swift; sourceTree = "<group>"; };
 		B8FEC3502565899900D1DBD7 /* errorDataset.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = errorDataset.csv; sourceTree = SOURCE_ROOT; };
@@ -129,6 +131,7 @@
 				B8AB6B2C251E4919005BF38F /* HomeViewController.swift */,
 				B873C7C425291A2D00F9F940 /* droneView.xib */,
 				B8B5B80B2532960300B59541 /* markerData.swift */,
+				B8C7083A25EAE30800E29885 /* networkManager.swift */,
 				B873C7C825291B3A00F9F940 /* droneView.swift */,
 				B81A4B9F2546002A0087C4F9 /* droneViewMapDelegate.swift */,
 				B81EC62825201D73003A602F /* SlideInTransition.swift */,
@@ -271,6 +274,7 @@
 				B81EC625252016BF003A602F /* MenuViewController.swift in Sources */,
 				B8B5B80C2532960300B59541 /* markerData.swift in Sources */,
 				B81EC62925201D73003A602F /* SlideInTransition.swift in Sources */,
+				B8C7083B25EAE30800E29885 /* networkManager.swift in Sources */,
 				B873C7C925291B3A00F9F940 /* droneView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad10_5" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -56,14 +56,24 @@
                                 <action selector="loadTestData:" destination="-1" eventType="touchUpInside" id="qoA-30-Pbc"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gG-yl-Lx2">
+                            <rect key="frame" x="148" y="294" width="156" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                            <state key="normal" title="Download Scan"/>
+                            <connections>
+                                <action selector="downloadScan" destination="-1" eventType="touchUpInside" id="lsC-5x-gah"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="IdU-Iu-6Rz" firstAttribute="top" secondItem="1cW-c7-AyM" secondAttribute="top" constant="30" id="5nm-si-f6V"/>
                         <constraint firstItem="UxO-1f-Ykj" firstAttribute="top" secondItem="IdU-Iu-6Rz" secondAttribute="bottom" constant="118" id="7iN-q4-UCH"/>
                         <constraint firstItem="ySk-E6-PZv" firstAttribute="top" secondItem="IdU-Iu-6Rz" secondAttribute="bottom" constant="30" id="HXk-5z-7gW"/>
+                        <constraint firstAttribute="bottom" secondItem="4gG-yl-Lx2" secondAttribute="bottom" constant="460" id="JdR-cp-Fdd"/>
                         <constraint firstItem="IdU-Iu-6Rz" firstAttribute="centerX" secondItem="1cW-c7-AyM" secondAttribute="centerX" id="Xfh-Vk-g42"/>
                         <constraint firstItem="ySk-E6-PZv" firstAttribute="leading" secondItem="1cW-c7-AyM" secondAttribute="leading" constant="15" id="wQD-lI-Fpo"/>
+                        <constraint firstItem="4gG-yl-Lx2" firstAttribute="centerX" secondItem="1cW-c7-AyM" secondAttribute="centerX" id="wVJ-zx-eyr"/>
                         <constraint firstItem="UxO-1f-Ykj" firstAttribute="leading" secondItem="ySk-E6-PZv" secondAttribute="trailing" constant="30" id="zks-Nm-emv"/>
                     </constraints>
                 </view>

@@ -23,6 +23,7 @@ class droneView: UIView, UIGestureRecognizerDelegate{
     var mapTypeIndex: Int = 0
     var line = MKPolyline()
     let markerManager = MarkerDataManger()
+    let network = NetworkManager()
     
     // MARK: IBACTIONS
     @IBAction func addMarker(_ sender: Any) {
@@ -114,12 +115,16 @@ class droneView: UIView, UIGestureRecognizerDelegate{
             return
         }
         else{
-            print("Coordinates selected:")
-            for pin in markerManager.pinArr{
-                print(pin.coordinate)
-            }
+            let markerDict = markerManager.getDict()
+            print("sending marker list: ")
+            print(markerDict)
+            print(network.scanPost(scanList: markerDict))
+//            print(network.scanGet())
         }
+        
+        
     }
+    
     
     
     func updateTime(){
