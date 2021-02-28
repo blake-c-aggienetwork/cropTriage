@@ -2,6 +2,12 @@
 Accompanying application for senior design team 29 for Texas A&M ECEN 403, 404 Senior Design.
 
 # Changelog
+> 2/27/2021
+> - Added basic networking capabilities to swift app
+> - App can now send list of coordinates to local server
+> - App can now download CSV files from local server
+> - These functions have been verified to work with raspberry pi zero
+
 > 2/24/2021
 > - Created Python with Flask library HTTP REST API for app to interface with
 > - The REST API contains these URL paths: /state, /scan, /lidar, /home, /location
@@ -69,10 +75,10 @@ Accompanying application for senior design team 29 for Texas A&M ECEN 403, 404 S
 
 | Unit Test          | Description                                                                                   | Due Date | Completed |
 |--------------------|-----------------------------------------------------------------------------------------------|----------|-----------|
-| Network Ability    | App can send and recieve data through a network in general.                                   | 3/1/21   |          |
-| Waypoint Send      | App send waypoint list to webserver on a LAN                                                  | 3/8/21   |          |
-| CSV receieve       | App can recieve CSV data from webserver on a LAN.                                             | 3/22/21  |          |
-| Manage State       | Appropiate features for managing and syncing drone and app state are implemented              | 3/27/21  |          |
+| Network Ability    | App can send and recieve data through a network in general.                                   | 3/1/21   |     ✅     |
+| Waypoint Send      | App send waypoint list to webserver on a LAN                                                  | 3/8/21   |     ✅     |
+| CSV receieve       | App can recieve CSV data from webserver on a LAN.                                             | 3/22/21  |     ✅     |
+| Tune Networking    | Appropiate features for managing data recieved from the network, and QOL features             | 3/27/21  |          |
 
 
 # Unit Test Schedule for Fall 2020
