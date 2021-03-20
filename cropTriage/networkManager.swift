@@ -8,7 +8,14 @@
 import Foundation
 
 class NetworkManager{
-    let serverURL = "http://0.0.0.0:25565"
+    var serverURL = "http://192.168.1.252:25565"
+    let defaults = UserDefaults.standard
+    
+    init() {
+        let droneIP = defaults.string(forKey: "droneIP") ?? "0.0.0.0"
+        let dronePort = defaults.string(forKey: "dronePort") ?? "25565"
+        serverURL = "http://\(droneIP):\(dronePort)"
+    }
     
     func scanPost(scanList: Dictionary<String,String>) -> String{
         let params = scanList
@@ -59,13 +66,16 @@ class NetworkManager{
         
     }
     
-    func lidarGet(){
+    func lidarGet() -> String{
         var request = URLRequest(url: URL(string: "\(serverURL)/lidar")!)
         
+        
+        
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let dataPath = documentsDirectory.appendingPathComponent("lastScan\(Date()).csv")
+        let fileName = "lastScan\(Date()).csv"
+        let dataPath = documentsDirectory.appendingPathComponent(fileName)
         _ = FileManager().fileExists(atPath: dataPath.path)
-
+            
         request.httpMethod = "GET"
         
         print(dataPath)
@@ -86,6 +96,7 @@ class NetworkManager{
         }
 
         task.resume()
+        return fileName
     }
     
     

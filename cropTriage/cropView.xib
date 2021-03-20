@@ -31,50 +31,47 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cW-c7-AyM" userLabel="controlView">
                     <rect key="frame" x="20" y="20" width="452" height="794"/>
                     <subviews>
-                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IdU-Iu-6Rz">
-                            <rect key="frame" x="112.5" y="30" width="227" height="32"/>
-                            <segments>
-                                <segment title="Standard"/>
-                                <segment title="Hybrid"/>
-                                <segment title="Satellite"/>
-                            </segments>
-                            <connections>
-                                <action selector="selectedNewMapType:" destination="-1" eventType="valueChanged" id="ptQ-KF-zCO"/>
-                            </connections>
-                        </segmentedControl>
-                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ySk-E6-PZv">
-                            <rect key="frame" x="15" y="91" width="215" height="216"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="215" id="iJ0-WQ-gqX"/>
-                            </constraints>
-                        </pickerView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxO-1f-Ykj">
-                            <rect key="frame" x="260" y="179" width="148" height="40"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                            <state key="normal" title="Load Test Data"/>
-                            <connections>
-                                <action selector="loadTestData:" destination="-1" eventType="touchUpInside" id="qoA-30-Pbc"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gG-yl-Lx2">
-                            <rect key="frame" x="148" y="294" width="156" height="40"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                            <state key="normal" title="Download Scan"/>
-                            <connections>
-                                <action selector="downloadScan" destination="-1" eventType="touchUpInside" id="lsC-5x-gah"/>
-                            </connections>
-                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oNP-BI-NPv">
+                            <rect key="frame" x="66" y="25" width="320" height="342"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IdU-Iu-6Rz">
+                                    <rect key="frame" x="46.5" y="0.0" width="227" height="32"/>
+                                    <segments>
+                                        <segment title="Standard"/>
+                                        <segment title="Hybrid"/>
+                                        <segment title="Satellite"/>
+                                    </segments>
+                                    <connections>
+                                        <action selector="selectedNewMapType:" destination="-1" eventType="valueChanged" id="ptQ-KF-zCO"/>
+                                    </connections>
+                                </segmentedControl>
+                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ySk-E6-PZv">
+                                    <rect key="frame" x="0.0" y="36" width="320" height="216"/>
+                                    <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                </pickerView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxO-1f-Ykj">
+                                    <rect key="frame" x="86" y="257" width="148" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                    <state key="normal" title="Load Test Data"/>
+                                    <connections>
+                                        <action selector="loadTestData:" destination="-1" eventType="touchUpInside" id="qoA-30-Pbc"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gG-yl-Lx2">
+                                    <rect key="frame" x="82" y="302" width="156" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                    <state key="normal" title="Download Scan"/>
+                                    <connections>
+                                        <action selector="downloadScan" destination="-1" eventType="touchUpInside" id="lsC-5x-gah"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="IdU-Iu-6Rz" firstAttribute="top" secondItem="1cW-c7-AyM" secondAttribute="top" constant="30" id="5nm-si-f6V"/>
-                        <constraint firstItem="UxO-1f-Ykj" firstAttribute="top" secondItem="IdU-Iu-6Rz" secondAttribute="bottom" constant="118" id="7iN-q4-UCH"/>
-                        <constraint firstItem="ySk-E6-PZv" firstAttribute="top" secondItem="IdU-Iu-6Rz" secondAttribute="bottom" constant="30" id="HXk-5z-7gW"/>
-                        <constraint firstAttribute="bottom" secondItem="4gG-yl-Lx2" secondAttribute="bottom" constant="460" id="JdR-cp-Fdd"/>
-                        <constraint firstItem="IdU-Iu-6Rz" firstAttribute="centerX" secondItem="1cW-c7-AyM" secondAttribute="centerX" id="Xfh-Vk-g42"/>
-                        <constraint firstItem="ySk-E6-PZv" firstAttribute="leading" secondItem="1cW-c7-AyM" secondAttribute="leading" constant="15" id="wQD-lI-Fpo"/>
-                        <constraint firstItem="4gG-yl-Lx2" firstAttribute="centerX" secondItem="1cW-c7-AyM" secondAttribute="centerX" id="wVJ-zx-eyr"/>
-                        <constraint firstItem="UxO-1f-Ykj" firstAttribute="leading" secondItem="ySk-E6-PZv" secondAttribute="trailing" constant="30" id="zks-Nm-emv"/>
+                        <constraint firstItem="oNP-BI-NPv" firstAttribute="top" secondItem="1cW-c7-AyM" secondAttribute="top" constant="25" id="GhR-U7-X7Q"/>
+                        <constraint firstItem="oNP-BI-NPv" firstAttribute="centerX" secondItem="1cW-c7-AyM" secondAttribute="centerX" id="rJH-zD-rJh"/>
                     </constraints>
                 </view>
             </subviews>

@@ -36,14 +36,18 @@ class CropDataManager{
     init() {
         
         //Load Test CSV data for now
-        self.fileNames.append("Demo Data")
-        self.fileNames.append("Non-Existant Data")
-        self.fileNames.append("1million")
-        self.fileNames.append("errorDataset")
-        self.fileNames.append("1hundredthousand")
-        self.fileNames.append("10thousand")
-        self.fileNames.append("1000")
+        self.fileNames = (defaults.array(forKey: "fileNameArray") ?? [""]) as! Array<String>
         
+    }
+    
+    func saveFilenamelist(){
+        for i in 0...fileNames.count-1{
+            if fileNames[i] == ""{
+                fileNames.remove(at: i)
+                break
+            }
+        }
+        defaults.setValue(fileNames, forKey: "fileNameArray")
     }
     
     private func clearData(){
@@ -53,8 +57,12 @@ class CropDataManager{
     func loadCSV(fileName: String) -> Bool{
         self.clearData()
         // load CSV
-        guard let fileURL = Bundle.main.path(forResource: fileName, ofType: "csv") else { return false}
-        guard let fileStream = InputStream(fileAtPath: fileURL) else {return false}
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let dataPath = documentsDirectory.appendingPathComponent(fileName)
+        
+//        guard let fileURL = Bundle.main.path(forResource: dataPath, ofType: "csv") else { return false}
+//        guard let fileStream = InputStream(fileAtPath: dataPath) else {return false}
+        guard let fileStream = InputStream(url: dataPath) else {return false}
         let csv = try! CSVReader(stream: fileStream, hasHeaderRow: true)
         // print header info and rows
         print("Loaded CSV with headers: \(csv.headerRow!)")

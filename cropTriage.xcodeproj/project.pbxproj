@@ -15,6 +15,8 @@
 		B855E1A22555F2F4007FF5B2 /* CropDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B855E1A12555F2F4007FF5B2 /* CropDataManager.swift */; };
 		B8607BF82569F0330065657A /* 10thousand.csv in Resources */ = {isa = PBXBuildFile; fileRef = B8607BF72569F0330065657A /* 10thousand.csv */; };
 		B8607BFF2569F1140065657A /* 1000.csv in Resources */ = {isa = PBXBuildFile; fileRef = B8607BFE2569F1140065657A /* 1000.csv */; };
+		B8619A3826069D770088474B /* settingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8619A3726069D770088474B /* settingsView.xib */; };
+		B8619A3B26069DBA0088474B /* settingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8619A3A26069DBA0088474B /* settingsView.swift */; };
 		B873C7C525291A2D00F9F940 /* droneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B873C7C425291A2D00F9F940 /* droneView.xib */; };
 		B873C7C925291B3A00F9F940 /* droneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B873C7C825291B3A00F9F940 /* droneView.swift */; };
 		B89FF86825578A2E000397D7 /* Demo Data.csv in Resources */ = {isa = PBXBuildFile; fileRef = B89FF86725578A2E000397D7 /* Demo Data.csv */; };
@@ -43,6 +45,8 @@
 		B855E1A12555F2F4007FF5B2 /* CropDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropDataManager.swift; sourceTree = "<group>"; };
 		B8607BF72569F0330065657A /* 10thousand.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 10thousand.csv; sourceTree = SOURCE_ROOT; };
 		B8607BFE2569F1140065657A /* 1000.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 1000.csv; sourceTree = SOURCE_ROOT; };
+		B8619A3726069D770088474B /* settingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = settingsView.xib; sourceTree = "<group>"; };
+		B8619A3A26069DBA0088474B /* settingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsView.swift; sourceTree = "<group>"; };
 		B873C7C425291A2D00F9F940 /* droneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = droneView.xib; sourceTree = "<group>"; };
 		B873C7C825291B3A00F9F940 /* droneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = droneView.swift; sourceTree = "<group>"; };
 		B89FF86725578A2E000397D7 /* Demo Data.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Demo Data.csv"; sourceTree = SOURCE_ROOT; };
@@ -138,6 +142,8 @@
 				B8F3D9172550A23B005F67A0 /* cropView.xib */,
 				B8F3D91A2550A25D005F67A0 /* cropView.swift */,
 				B855E1A12555F2F4007FF5B2 /* CropDataManager.swift */,
+				B8619A3726069D770088474B /* settingsView.xib */,
+				B8619A3A26069DBA0088474B /* settingsView.swift */,
 			);
 			path = cropTriage;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 				B89FF86825578A2E000397D7 /* Demo Data.csv in Resources */,
 				B8607BFF2569F1140065657A /* 1000.csv in Resources */,
 				B8AB6B32251E491A005BF38F /* Assets.xcassets in Resources */,
+				B8619A3826069D770088474B /* settingsView.xib in Resources */,
 				B855E19F2555F232007FF5B2 /* ideal_raspberrypi_output.csv in Resources */,
 				B8AB6B30251E4919005BF38F /* Main.storyboard in Resources */,
 				B8FEC3512565899900D1DBD7 /* errorDataset.csv in Resources */,
@@ -274,6 +281,7 @@
 				B81EC625252016BF003A602F /* MenuViewController.swift in Sources */,
 				B8B5B80C2532960300B59541 /* markerData.swift in Sources */,
 				B81EC62925201D73003A602F /* SlideInTransition.swift in Sources */,
+				B8619A3B26069DBA0088474B /* settingsView.swift in Sources */,
 				B8C7083B25EAE30800E29885 /* networkManager.swift in Sources */,
 				B873C7C925291B3A00F9F940 /* droneView.swift in Sources */,
 			);

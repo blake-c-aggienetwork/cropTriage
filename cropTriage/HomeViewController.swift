@@ -87,8 +87,7 @@ class HomeViewController: UIViewController {
         case .Settings:
             title = "Settings"
             self.title = title
-            let view = UIView()
-            view.backgroundColor = .green
+            let view = settingsView()
             view.frame = self.view.bounds
             self.view.addSubview(view)
             self.topView = view

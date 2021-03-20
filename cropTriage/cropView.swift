@@ -82,7 +82,11 @@ class cropView: UIView, ChartViewDelegate {
     }
     
     @IBAction func downloadScan(){
-        network.lidarGet()
+        let fileName = network.lidarGet()
+        cropManager.fileNames.insert(fileName, at: 0)
+        cropManager.saveFilenamelist()
+        
+        dataSelector.reloadAllComponents()
         
     }
     
