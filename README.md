@@ -2,6 +2,14 @@
 Accompanying application for senior design team 29 for Texas A&M ECEN 403, 404 Senior Design.
 
 # Changelog
+> 3/20/2021
+> - Removed placeholder names of buttons, variables
+> - Removed ability to view test data preplaced onto the app and not from REST server
+> - Reworked spacing of multiple views
+> - Added settings page which allows users to set custom IP, port for drone
+> - Reworked file management for LiDar Data
+> - Added app icon
+
 > 2/27/2021
 > - Added basic networking capabilities to swift app
 > - App can now send list of coordinates to local server
@@ -78,7 +86,7 @@ Accompanying application for senior design team 29 for Texas A&M ECEN 403, 404 S
 | Network Ability    | App can send and recieve data through a network in general.                                   | 3/1/21   |     ✅     |
 | Waypoint Send      | App send waypoint list to webserver on a LAN                                                  | 3/8/21   |     ✅     |
 | CSV receieve       | App can recieve CSV data from webserver on a LAN.                                             | 3/8/21  |     ✅     |
-| Tune Networking    | Appropiate features for managing data recieved from the network, and QOL features             | 3/16/21  |          |
+| Tune Networking    | Appropiate features for managing data recieved from the network, and QOL features             | 3/16/21  |     ✅    |
 
 
 # Unit Test Schedule for Fall 2020
