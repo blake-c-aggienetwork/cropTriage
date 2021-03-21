@@ -10,6 +10,7 @@ import Foundation
 class NetworkManager{
     var serverURL = "http://192.168.1.252:25565"
     let defaults = UserDefaults.standard
+    var connectionStatus = false
     
     init() {
         let droneIP = defaults.string(forKey: "droneIP") ?? "0.0.0.0"
@@ -72,13 +73,13 @@ class NetworkManager{
         
         
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let fileName = "lastScan\(Date()).csv"
+        let fileName = "\(Date()).csv"
         let dataPath = documentsDirectory.appendingPathComponent(fileName)
         _ = FileManager().fileExists(atPath: dataPath.path)
             
         request.httpMethod = "GET"
         
-        print(dataPath)
+//        print(dataPath)
         let session = URLSession.shared
         let task = session.downloadTask(with: request) { localURL, urlResponse, error in
             if let localURL = localURL {
@@ -89,6 +90,7 @@ class NetworkManager{
                         print("file has been written")
                     } catch {
                         print(error.localizedDescription)
+                        print("test")
                         // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
                     }
                 }
@@ -99,5 +101,43 @@ class NetworkManager{
         return fileName
     }
     
+    func checkConnection() -> Bool{
+        _ = self.getState()
+        
+        let secondsToDelay = 2.5
+        DispatchQueue.main.asyncAfter(deadline: .now() + secondsToDelay) {
+            if self.connectionStatus{
+                print("connected")
+            }
+            else{
+                print("no connection")
+            }
+//            self.connectionStatus = false
+        }
+        return self.connectionStatus
+    }
     
+    func getState() -> [String:AnyObject] {
+        var request = URLRequest(url: URL(string: "\(serverURL)/state")!)
+        
+        request.httpMethod = "GET"
+        
+        var status: [String:AnyObject] = [:]
+        let session = URLSession.shared
+        let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
+            guard response != nil else { print("NETWORK ERROR"); return}
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
+                self.connectionStatus = true
+                status = json as [String:AnyObject]
+                print(status)
+            } catch {
+                print("NETWORK ERROR")
+            }
+        })
+        task.resume()
+        
+        return status
+    }
+
 }

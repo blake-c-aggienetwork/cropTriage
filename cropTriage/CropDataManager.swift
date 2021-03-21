@@ -55,6 +55,9 @@ class CropDataManager{
     }
     
     func loadCSV(fileName: String) -> Bool{
+        if fileName == ""{
+            return false
+        }
         self.clearData()
         // load CSV
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -64,6 +67,7 @@ class CropDataManager{
 //        guard let fileStream = InputStream(fileAtPath: dataPath) else {return false}
         guard let fileStream = InputStream(url: dataPath) else {return false}
         let csv = try! CSVReader(stream: fileStream, hasHeaderRow: true)
+        
         // print header info and rows
         print("Loaded CSV with headers: \(csv.headerRow!)")
         while let row = csv.next(){

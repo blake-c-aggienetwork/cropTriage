@@ -20,7 +20,7 @@ class cropView: UIView, ChartViewDelegate {
     var network = NetworkManager()
     var barChart = BarChartView()
     
-
+    
     // IB outlets
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var mapView: MKMapView!
@@ -48,6 +48,9 @@ class cropView: UIView, ChartViewDelegate {
     
     @IBAction func loadTestData(_ sender: Any) {
         // Data manager will load selected data
+        if cropManager.fileNames.isEmpty{
+            return
+        }
         let selectedDataIndex = dataSelector.selectedRow(inComponent: 0)
         print("Loading data from: " + cropManager.fileNames[selectedDataIndex])
         if cropManager.loadCSV(fileName: cropManager.fileNames[selectedDataIndex]) == false{
@@ -65,16 +68,16 @@ class cropView: UIView, ChartViewDelegate {
         let heatMapOverlay = DTMHeatmap()
         let heatMapData = cropManager.getHeatMapData()
         heatMapOverlay.setData(heatMapData as [NSObject: AnyObject])
-//        let colorProvider = DTMColorProvider()
-//        heatMapOverlay.colorProvider =
-//        have not figured out how to configure heatmap colors yet
+        //        let colorProvider = DTMColorProvider()
+        //        heatMapOverlay.colorProvider =
+        //        have not figured out how to configure heatmap colors yet
         mapView.addOverlay(heatMapOverlay)
         
         print("Added Heat Map Overlay")
         
         
         let chartData = cropManager.getBarChartData()
-//        chartData.barWidth = 10
+        //        chartData.barWidth = 10
         chartData.highlightEnabled = false
         barChart.data = chartData
         
@@ -82,11 +85,21 @@ class cropView: UIView, ChartViewDelegate {
     }
     
     @IBAction func downloadScan(){
-        let fileName = network.lidarGet()
-        cropManager.fileNames.insert(fileName, at: 0)
-        cropManager.saveFilenamelist()
+        let connectionStatus = network.checkConnection()
+        let secondsToDelay = 2.5
+        DispatchQueue.main.asyncAfter(deadline: .now() + secondsToDelay) {
+            print("This message is delayed")
+            if connectionStatus{
+                let fileName = self.network.lidarGet()
+                self.cropManager.fileNames.insert(fileName, at: 0)
+                self.cropManager.saveFilenamelist()
+                
+                self.dataSelector.reloadAllComponents()
+            }else{
+                print("no connection to server, download aborted")
+            }
+        }
         
-        dataSelector.reloadAllComponents()
         
     }
     
@@ -103,7 +116,7 @@ class cropView: UIView, ChartViewDelegate {
     }
     
     private func commonInit(){
-    
+        
         // Load elements from .xib
         Bundle.main.loadNibNamed("cropView", owner: self, options: nil)
         addSubview(contentView)
@@ -133,7 +146,7 @@ class cropView: UIView, ChartViewDelegate {
         
         barChart.delegate = self // This view acts on behalf of the chart view
         barChart.frame = CGRect(x: 15, y: 365, width: controlView.frame.size.width-30, height: 300)
-//        barChart.center = chartViewHolder.center
+        //        barChart.center = chartViewHolder.center
         
         controlView.addSubview(barChart)
         
