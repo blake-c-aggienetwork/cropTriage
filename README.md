@@ -2,6 +2,11 @@
 Accompanying application for senior design team 29 for Texas A&M ECEN 403, 404 Senior Design.
 
 # Changelog
+> 3/21/2021
+> - Fixed crashes related to download of Lidar data failing
+> - Changed naming scheme of downloaded lidar data
+> - Fixed crash relating to attempign to load empty data
+
 > 3/20/2021
 > - Removed placeholder names of buttons, variables
 > - Removed ability to view test data preplaced onto the app and not from REST server
