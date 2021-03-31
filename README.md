@@ -84,7 +84,7 @@ Accompanying application for senior design team 29 for Texas A&M ECEN 403, 404 S
 > - Made Xcode project files, and created readme
 
 
-# Unit Test Schedule for Fall 2021
+# Unit Test Schedule for Spring 2021
 
 | Unit Test          | Description                                                                                   | Due Date | Completed |
 |--------------------|-----------------------------------------------------------------------------------------------|----------|-----------|
