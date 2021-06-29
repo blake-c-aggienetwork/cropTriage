@@ -1,6 +1,8 @@
 # cropTriage
 Accompanying application for senior design team 29 for Texas A&M ECEN 403, 404 Senior Design.
 
+!!! This application was not designed to be very maintainable and was designed to get an A in two semesters. It breaks several MVC rules. !!!
+
 # Changelog
 > 3/21/2021
 > - Fixed crashes related to download of Lidar data failing
